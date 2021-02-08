@@ -1,0 +1,132 @@
+.main-header {
+  @include desktop-container;
+  @include flex-row;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 33px;
+}
+
+.main-header__logo-wrapper {
+  @include empty-rule;
+}
+
+.main-header__contacts-list {
+  @include clear-list;
+  @include flex-row;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.main-header__contacts-item {
+  margin: 0 44px;
+}
+
+.main-header__contacts-link {
+  color: $white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17.92px;
+
+  position: relative;
+
+  &--email {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: -35px;
+
+      width: 19px;
+      height: 14px;
+
+      background-image: url("../img/icon-envelope.svg");
+    }
+  }
+
+  &--tel {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: -25px;
+
+      width: 18px;
+      height: 18px;
+
+      background-image: url("../img/icon-phone-call.svg");
+    }
+  }
+}
+
+.main-header__callback-btn {
+  @include roboto-condensed-font;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 5px;
+
+  padding: 15px 28px;
+  margin-left: 38px;
+
+  @include active-states;
+}
+
+
+@media (max-width: $tablet-width-only) {
+  .main-header {
+    @include tablet-container;
+  }
+
+  .main-header__logo-wrapper {
+    @include empty-rule;
+  }
+
+  .main-header__contacts-list {
+    @include empty-rule;
+  }
+
+  .main-header__contacts-item {
+    @include empty-rule;
+  }
+
+  .main-header__contacts-link {
+     &--email {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: -35px;
+
+        width: 19px;
+        height: 14px;
+
+        background-image: url("../img/icon-envelope.svg");
+      }
+    }
+
+    &--tel {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: -25px;
+
+        width: 18px;
+        height: 18px;
+
+        background-image: url("../img/icon-phone-call.svg");
+      }
+    }
+  }
+
+  .main-header__contacts-text {
+    display: none;
+  }
+
+  .main-header__callback-btn {
+    display: none;
+  }
+}

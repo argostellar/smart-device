@@ -1,0 +1,41 @@
+.logo {
+  @include flex-row;
+}
+
+.logo__image {
+  @include empty-rule;
+}
+
+.logo__text-wrapper {
+  @include flex-column;
+  margin-left: 16px;
+}
+
+.logo__maintext {
+  @include reset-space;
+  @include roboto-condensed-font;
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: 700;
+
+  margin-bottom: 0;
+
+  &--header {
+    color: $white;
+  }
+
+  &--footer {
+    color: $logo-black;
+  }
+}
+
+.logo__subtext {
+  @include reset-space;
+  @include roboto-font;
+  color: $logo-grey;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+
+  margin-top: 0;
+}

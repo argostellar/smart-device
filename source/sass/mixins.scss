@@ -1,0 +1,157 @@
+@mixin roboto-font {
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+@mixin roboto-condensed-font {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+@mixin clear-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-space {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin title {
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+}
+
+@mixin mobile-space {
+  margin: 0 20px;
+}
+
+@mixin tablet-space {
+  margin: 0 30px;
+}
+
+@mixin desktop-space {
+  margin: 0 110px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1220px;
+}
+
+@mixin desktop-container {
+  width: $desktop-width;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@mixin tablet-container {
+  width: $tablet-width;
+  margin: 0 24px;
+  padding: 0;
+}
+
+@mixin desktop-adaptive-margin {
+  margin-left: calc((100vw - 1300px) / 2);
+}
+
+@mixin desktop-adaptive-margin-form {
+  margin-left: calc(((100vw - 1300px) / 2) + 39px);
+}
+
+@mixin font-family {
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+@mixin tablet-text-font {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin tablet-arial-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin tablet-title-font {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+@mixin border-top {
+  border-top: 1px solid $footer-border-grey;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid $footer-border-grey;
+}
+
+@mixin active-states {
+  &:hover,
+  &:focus {
+    color: $blue;
+    border-color: $blue;
+    fill: $blue;
+  }
+
+  &:active {
+    color: rgba($blue, 0.4);
+    border-color: rgba($blue, 0.4);
+    fill: rgba($blue, 0.4);
+  }
+}
+
+@mixin empty-rule {
+  hyphens: auto;
+}
+
+@mixin redline {
+  outline: 1px solid red;
+}
+
+@mixin fadeline {
+  outline: 10px solid rgba(red, 0.48);
+}
+
+@mixin yellowline {
+  outline: 3px dashed yellow;
+}
+
+@mixin blackline {
+  outline: 1px solid black;
+}
+
+@mixin violetline {
+  outline: 2px dotted violet;
+}
+
+@mixin greenline {
+  outline: 2px solid green;
+}
+
+@mixin caption($name) {
+  position: relative;
+
+  &::after {
+    content: "" + $name;
+    font-size: 24px;
+    color: $white;
+    text-shadow: 5px 5px 3px #111111;
+
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+  }
+}

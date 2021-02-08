@@ -1,0 +1,36 @@
+.social {
+  @include empty-rule;
+}
+
+.social__list {
+  @include clear-list;
+  @include flex-row;
+}
+
+.social__item {
+  margin-right: 16px;
+}
+
+.social__link {
+  color: $social-grey;
+  text-decoration: none;
+}
+
+.social__icon {
+  fill: $social-grey;
+
+  @include active-states;
+}
+
+.social__icon--fb {
+  @include empty-rule;
+}
+
+.social__icon--odno {
+  @include empty-rule;
+}
+
+.social__icon--vk {
+  @include empty-rule;
+}
+

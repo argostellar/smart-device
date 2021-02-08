@@ -1,13 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Smart Device - Проект Акселератора. Добро пожаловать!</h1>
+  <div style="display:none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+  <header class="main-header">
+    <div class="main-header__logo-wrapper">
+      <a href="#logo-image" class="main-header__logo logo">
+        <img class="logo__image" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
+        <div class="logo__text-wrapper">
+          <p class="logo__maintext logo__maintext--header">Smart Device</p>
+          <p class="logo__subtext">умные технологии</p>
+        </div>
+      </a>
+    </div>
+    <ul class="main-header__contacts-list">
+      <li class="main-header__contacts-item">
+        <a href="#email" class="main-header__contacts-link main-header__contacts-link--email">
+          <span class="main-header__contacts-text">info@sd.ru</span>
+        </a>
+      </li>
+      <li class="main-header__contacts-item">
+        <a href="#tel" class="main-header__contacts-link main-header__contacts-link--tel">
+          <span class="main-header__contacts-text">+7 (495) 000 52 52</span>
+        </a>
+      </li>
+    </ul>
+    <a href="#callback" class="main-header__callback-btn">Заказать звонок</a>
+  </header>
+  <main></main>
+  <footer class="main-footer">
+    <div class="main-footer__upper-part-wrapper">
+      <h3 class="visually-hidden">Upper footer</h3>
+      <div class="main-footer__left-wrapper">
+        <div class="main-footer__logo-wrapper">
+          <a href="#logo-image" class="main-footer__logo logo">
+            <img class="logo__image" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
+            <div class="logo__text-wrapper">
+              <p class="logo__maintext logo__maintext--footer">Smart Device</p>
+              <p class="logo__subtext">умные технологии</p>
+            </div>
+          </a>
+        </div>
+        <div class="main-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#social-fb" class="social__link">
+                <svg class="social__icon social__icon--fb" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
+                <use xlink:href="#icon-social-fb"></use>
+              </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#social-odno" class="social__link">
+                <svg class="social__icon social__icon--odno" xmlns="http://www.w3.org/2000/svg" width="27" height="26">
+                <use xlink:href="#icon-social-odno"></use>
+              </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#social-vk" class="social__link">
+                <svg class="social__icon social__icon--vk" xmlns="http://www.w3.org/2000/svg" width="27" height="26">
+                <use xlink:href="#icon-social-vk"></use>
+              </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-footer__central-wrapper">
+        <h3 class="main-footer__title">Разделы сайта</h3>
+        <ul class="main-footer__sections-list">
+          <li class="main-footer__sections-item">
+            <a href="#" class="main-footer__sections-link">О компании</a>
+          </li>
+          <li class="main-footer__sections-item">
+            <a href="#" class="main-footer__sections-link">Продукты</a>
+          </li>
+          <li class="main-footer__sections-item">
+            <a href="#" class="main-footer__sections-link">Производство печатных плат</a>
+          </li>
+          <li class="main-footer__sections-item">
+            <a href="#" class="main-footer__sections-link">Монтаж печатных плат</a>
+          </li>
+          <li class="main-footer__sections-item">
+            <a href="#" class="main-footer__sections-link">Комплектующие</a>
+          </li>
+          <li class="main-footer__sections-item">
+            <a href="#" class="main-footer__sections-link">Доставка</a>
+          </li>
+          <li class="main-footer__sections-item">
+            <a href="#" class="main-footer__sections-link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer__right-wrapper">
+        <h3 class="main-footer__title">Наш офис</h3>
+        <ul class="main-footer__contact-details-list">
+          <li class="main-footer__contact-details-item">г. Мытищи, Олимпийский проспект, д.10</li>
+          <li class="main-footer__contact-details-item">+7 (495) 589-40-50</li>
+          <li class="main-footer__contact-details-item">+7 (925) 003-87-67</li>
+          <li class="main-footer__contact-details-item">+7 (926) 926-080-79</li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-footer__lower-part-wrapper">
+      <h3 class="visually-hidden">Lower footer: ul или не ul?</h3>
+      <ul class="main-footer__info-list">
+        <li class="main-footer__info-item">
+          <p class="main-footer__info-text">Все права защищены</p>
+        </li>
+        <li class="main-footer__info-item">
+          <p class="main-footer__info-text">1999-2018 SD Service Devices</p>
+        </li>
+        <li class="main-footer__info-item">
+          <a class="main-footer__info-text main-footer__info-text--link" href="#policy">Условия конфиденциальности</a>
+        </li>
+        <li class="main-footer__info-item">
+          <p class="main-footer__info-text">Developed by wow studio </p>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </body>
+
 </html>
