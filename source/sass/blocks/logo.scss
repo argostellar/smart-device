@@ -39,3 +39,27 @@
 
   margin-top: 0;
 }
+
+
+@media (max-width: $mobile-width-only) {
+  .logo__maintext {
+    @include empty-rule;
+
+    &--header {
+      display: none;
+    }
+
+    &--footer {
+      color: $logo-black;
+    }
+  }
+
+  .logo__subtext {
+    @include empty-rule;
+
+    &--header {
+      display: none;
+    }
+  }
+
+}

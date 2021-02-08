@@ -15,21 +15,30 @@
   <header class="main-header">
     <div class="main-header__logo-wrapper">
       <a href="#logo-image" class="main-header__logo logo">
-        <img class="logo__image" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/logo-circuit-mobile.svg">
+          <img class="logo__image" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
+        </picture>
         <div class="logo__text-wrapper">
           <p class="logo__maintext logo__maintext--header">Smart Device</p>
-          <p class="logo__subtext">умные технологии</p>
+          <p class="logo__subtext logo__subtext--header">умные технологии</p>
         </div>
       </a>
     </div>
     <ul class="main-header__contacts-list">
       <li class="main-header__contacts-item">
-        <a href="#email" class="main-header__contacts-link main-header__contacts-link--email">
+        <a href="#email" class="main-header__contacts-link main-header__contacts-link">
+          <svg class="main-header__contacts-icon main-header__contacts-icon--email" xmlns="http://www.w3.org/2000/svg" width="19" height="14">
+            <use xlink:href="#icon-envelope"></use>
+          </svg>
           <span class="main-header__contacts-text">info@sd.ru</span>
         </a>
       </li>
       <li class="main-header__contacts-item">
-        <a href="#tel" class="main-header__contacts-link main-header__contacts-link--tel">
+        <a href="#tel" class="main-header__contacts-link main-header__contacts-link">
+          <svg class="main-header__contacts-icon main-header__contacts-icon--tel" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+            <use xlink:href="#icon-phone-call"></use>
+          </svg>
           <span class="main-header__contacts-text">+7 (495) 000 52 52</span>
         </a>
       </li>
@@ -40,12 +49,12 @@
   <footer class="main-footer">
     <div class="main-footer__upper-part-wrapper">
       <h3 class="visually-hidden">Upper footer</h3>
-      <div class="main-footer__left-wrapper">
+      <div class="main-footer__logo-social-wrapper">
         <div class="main-footer__logo-wrapper">
           <a href="#logo-image" class="main-footer__logo logo">
             <img class="logo__image" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
             <div class="logo__text-wrapper">
-              <p class="logo__maintext logo__maintext--footer">Smart Device</p>
+              <p class="logo__maintext logo__maintext--footer">Service Device</p>
               <p class="logo__subtext">умные технологии</p>
             </div>
           </a>
@@ -55,61 +64,77 @@
             <li class="social__item">
               <a href="#social-fb" class="social__link">
                 <svg class="social__icon social__icon--fb" xmlns="http://www.w3.org/2000/svg" width="27" height="27">
-                <use xlink:href="#icon-social-fb"></use>
-              </svg>
+                  <use xlink:href="#icon-social-fb"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#social-odno" class="social__link">
                 <svg class="social__icon social__icon--odno" xmlns="http://www.w3.org/2000/svg" width="27" height="26">
-                <use xlink:href="#icon-social-odno"></use>
-              </svg>
+                  <use xlink:href="#icon-social-odno"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a href="#social-vk" class="social__link">
                 <svg class="social__icon social__icon--vk" xmlns="http://www.w3.org/2000/svg" width="27" height="26">
-                <use xlink:href="#icon-social-vk"></use>
-              </svg>
+                  <use xlink:href="#icon-social-vk"></use>
+                </svg>
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="main-footer__central-wrapper">
-        <h3 class="main-footer__title">Разделы сайта</h3>
-        <ul class="main-footer__sections-list">
-          <li class="main-footer__sections-item">
-            <a href="#" class="main-footer__sections-link">О компании</a>
-          </li>
-          <li class="main-footer__sections-item">
-            <a href="#" class="main-footer__sections-link">Продукты</a>
-          </li>
-          <li class="main-footer__sections-item">
-            <a href="#" class="main-footer__sections-link">Производство печатных плат</a>
-          </li>
-          <li class="main-footer__sections-item">
-            <a href="#" class="main-footer__sections-link">Монтаж печатных плат</a>
-          </li>
-          <li class="main-footer__sections-item">
-            <a href="#" class="main-footer__sections-link">Комплектующие</a>
-          </li>
-          <li class="main-footer__sections-item">
-            <a href="#" class="main-footer__sections-link">Доставка</a>
-          </li>
-          <li class="main-footer__sections-item">
-            <a href="#" class="main-footer__sections-link">Контакты</a>
-          </li>
-        </ul>
-      </div>
-      <div class="main-footer__right-wrapper">
-        <h3 class="main-footer__title">Наш офис</h3>
-        <ul class="main-footer__contact-details-list">
-          <li class="main-footer__contact-details-item">г. Мытищи, Олимпийский проспект, д.10</li>
-          <li class="main-footer__contact-details-item">+7 (495) 589-40-50</li>
-          <li class="main-footer__contact-details-item">+7 (925) 003-87-67</li>
-          <li class="main-footer__contact-details-item">+7 (926) 926-080-79</li>
-        </ul>
+      <div class="main-footer__info-wrapper">
+        <div class="main-footer__sections-wrapper">
+          <h3 class="main-footer__title">Разделы сайта</h3>
+          <button class="main-footer__btn main-footer__btn--hide">
+            <span class="visually-hidden">Скрыть</span>
+          </button>
+          <ul class="main-footer__sections-list">
+            <li class="main-footer__sections-item">
+              <a href="#" class="main-footer__sections-link">О компании</a>
+            </li>
+            <li class="main-footer__sections-item">
+              <a href="#" class="main-footer__sections-link">Продукты</a>
+            </li>
+            <li class="main-footer__sections-item">
+              <a href="#" class="main-footer__sections-link">Производство печатных плат</a>
+            </li>
+            <li class="main-footer__sections-item">
+              <a href="#" class="main-footer__sections-link">Монтаж печатных плат</a>
+            </li>
+            <li class="main-footer__sections-item">
+              <a href="#" class="main-footer__sections-link">Комплектующие</a>
+            </li>
+            <li class="main-footer__sections-item">
+              <a href="#" class="main-footer__sections-link">Доставка</a>
+            </li>
+            <li class="main-footer__sections-item">
+              <a href="#" class="main-footer__sections-link">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-footer__contact-details-wrapper">
+          <h3 class="main-footer__title">Наш офис</h3>
+          <button class="main-footer__btn main-footer__btn--hide">
+            <span class="visually-hidden">Скрыть</span>
+          </button>
+          <ul class="main-footer__contact-details-list">
+            <li class="main-footer__contact-details-item">
+              <a href="#" class="main-footer__contact-details-link">г. Мытищи, Олимпийский проспект, д.10</a>
+            </li>
+            <li class="main-footer__contact-details-item">
+              <a href="#" class="main-footer__contact-details-link">+7 (495) 589-40-50</a>
+            </li>
+            <li class="main-footer__contact-details-item">
+              <a href="#" class="main-footer__contact-details-link">+7 (925) 003-87-67</a>
+            </li>
+            <li class="main-footer__contact-details-item">
+              <a href="#" class="main-footer__contact-details-link">+7 (926) 926-080-79</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="main-footer__lower-part-wrapper">

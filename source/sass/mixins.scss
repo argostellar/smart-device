@@ -37,7 +37,7 @@
 }
 
 @mixin mobile-space {
-  margin: 0 20px;
+  margin: 0 15px;
 }
 
 @mixin tablet-space {
@@ -58,8 +58,8 @@
 }
 
 @mixin tablet-container {
-  width: $tablet-width;
-  margin: 0 24px;
+  width: auto;
+  margin: 0 25px;
   padding: 0;
 }
 

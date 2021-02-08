@@ -22,39 +22,22 @@
 }
 
 .main-header__contacts-link {
+  display: inline-flex;
   color: $white;
   font-weight: 400;
   font-size: 16px;
   line-height: 17.92px;
+}
 
-  position: relative;
+.main-header__contacts-icon {
+  @include empty-rule;
 
   &--email {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: -35px;
-
-      width: 19px;
-      height: 14px;
-
-      background-image: url("../img/icon-envelope.svg");
-    }
+    margin-right: 20px;
   }
 
   &--tel {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 3px;
-      left: -25px;
-
-      width: 18px;
-      height: 18px;
-
-      background-image: url("../img/icon-phone-call.svg");
-    }
+    margin-right: 16px;
   }
 }
 
@@ -78,6 +61,7 @@
 @media (max-width: $tablet-width-only) {
   .main-header {
     @include tablet-container;
+    margin-top: 20px;
   }
 
   .main-header__logo-wrapper {
@@ -89,36 +73,65 @@
   }
 
   .main-header__contacts-item {
-    @include empty-rule;
+    margin: 0;
   }
 
   .main-header__contacts-link {
-     &--email {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: -35px;
+    @include empty-rule;
+  }
 
-        width: 19px;
-        height: 14px;
+  .main-header__contacts-icon {
+    @include empty-rule;
 
-        background-image: url("../img/icon-envelope.svg");
-      }
+    &--email {
+      margin-right: 33px;
     }
 
     &--tel {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: -25px;
+      margin-right: 0;
+    }
+  }
 
-        width: 18px;
-        height: 18px;
+  .main-header__contacts-text {
+    display: none;
+  }
 
-        background-image: url("../img/icon-phone-call.svg");
-      }
+  .main-header__callback-btn {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-header {
+    @include mobile-space;
+    margin-top: 20px;
+  }
+
+  .main-header__logo-wrapper {
+    @include empty-rule;
+  }
+
+  .main-header__contacts-list {
+    @include empty-rule;
+  }
+
+  .main-header__contacts-item {
+    margin: 0;
+  }
+
+  .main-header__contacts-link {
+    @include empty-rule;
+  }
+
+  .main-header__contacts-icon {
+    @include empty-rule;
+
+    &--email {
+      margin-right: 23px;
+    }
+
+    &--tel {
+      margin-right: 0;
     }
   }
 
