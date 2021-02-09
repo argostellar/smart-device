@@ -1,0 +1,258 @@
+.main-screen {
+  @include flex-row;
+  background-color: $dark-grey;
+  background-image:
+    url("../../img/bg-triangle-main.svg"),
+    url("../../img/bg-main-screen.png");
+  background-size: cover, cover;
+  background-position: center, center;
+  margin-top: -90px;
+  z-index: 1;
+}
+
+.main-screen__inner-wrapper {
+  @include desktop-container;
+  @include flex-row;
+  padding-top: 176px;
+  margin-top: 100px;
+  margin-bottom: 108px;
+}
+
+.main-screen__text-wrapper {
+  @include flex-column;
+  align-items: start;
+  margin-bottom: 92px;
+  margin-top: calc(232px - 176px);
+}
+
+.main-screen__img-wrapper {
+  margin-bottom: 108px;
+  position: relative;
+}
+
+.main-screen__title {
+  @include reset-space;
+  @include roboto-condensed-font;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 80px;
+  line-height: 94px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+
+  min-width: 718px;
+
+  margin-bottom: 31px;
+}
+
+.main-screen__text {
+  @include reset-space;
+  font-size: 22px;
+  line-height: 34px;
+  color: $white;
+
+  max-width: 683px;
+
+  margin-left: calc(66px + 28px);
+  margin-bottom: 37px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 17px;
+    left: -94px;
+
+    width: 66px;
+    height: 2px;
+
+    background-color: $white;
+  }
+}
+
+.main-screen__main-btn {
+  @include roboto-condensed-font;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+
+  background-color: $blue;
+  border-radius: 5px;
+  padding: 17px 28px;
+
+  text-decoration: none;
+
+  margin-left: 94px;
+  margin-bottom: 93px;
+  align-self: start;
+}
+
+.main-screen__btn-text {
+  display: none;
+
+  &--mobile {
+    display: none;
+  }
+
+  &--non-mobile {
+    display: inline-block;
+  }
+}
+
+.main-screen__scroll-btn {
+  font-size: 14px;
+  line-height: 16px;
+  color: $white;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+
+  text-decoration: none;
+  align-self: start;
+  margin-left: -40px;
+}
+
+.main-screen__img {
+  max-width: 705px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main-screen__bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: $tablet-width-only) {
+  .main-screen {
+    @include empty-rule;
+  }
+
+  .main-screen__inner-wrapper {
+    width: auto;
+    padding: 0;
+    padding-top: calc(188px - 84px);
+    margin-left: 88px;
+    margin-top: 100px;
+    margin-bottom: calc(686px - 523px);
+  }
+
+  .main-screen__text-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .main-screen__img-wrapper {
+    @include empty-rule;
+  }
+
+  .main-screen__title {
+    font-size: 60px;
+    line-height: 70px;
+
+    min-width: auto;
+    max-width: 470px;
+  }
+
+  .main-screen__text {
+    font-size: 18px;
+    line-height: 28px;
+
+    min-width: auto;
+    max-width: 356px;
+
+    margin-left: calc(139px - 80px);
+
+    &::before {
+      top: 17px;
+      left: -48px;
+
+      width: 33px;
+    }
+  }
+
+  .main-screen__main-btn {
+    margin-left: calc(139px - 80px);
+    margin-bottom: 0;
+  }
+
+  .main-screen__scroll-btn {
+    display: none;
+  }
+
+  .main-screen__img {
+    max-width: 465px;
+    margin-left: -38px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-screen {
+    z-index: 1;
+  }
+
+  .main-screen__inner-wrapper {
+    @include reset-space;
+    @include flex-column;
+    margin: 0 15px;
+    padding-top: 192px;
+  }
+
+  .main-screen__text-wrapper {
+    z-index: 3;
+  }
+
+  .main-screen__img-wrapper {
+    order: -1;
+  }
+
+  .main-screen__title {
+    font-size: 40px;
+    line-height: 47px;
+
+    max-width: 277px;
+  }
+
+  .main-screen__text {
+    font-size: 16px;
+    line-height: 25px;
+
+    max-width: 245px;
+  }
+
+  .main-screen__main-btn {
+    margin: 0;
+    align-self: stretch;
+  }
+
+  .main-screen__btn-text {
+    display: none;
+
+    &--mobile {
+      display: inline-block;
+      text-align: center;
+    }
+
+    &--non-mobile {
+      display: none;
+    }
+  }
+
+  .main-screen__scroll-btn {
+    @include empty-rule;
+  }
+
+  .main-screen__img {
+    max-width: 301px;
+    top: -90px;
+    left: 42px;
+    z-index: 2;
+  }
+}

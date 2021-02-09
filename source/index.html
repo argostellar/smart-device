@@ -16,7 +16,7 @@
     <div class="main-header__logo-wrapper">
       <a href="#logo-image" class="main-header__logo logo">
         <picture>
-          <source media="(max-width: 768px)" srcset="img/logo-circuit-mobile.svg">
+          <source media="(max-width: 767px)" srcset="img/logo-circuit-mobile.svg">
           <img class="logo__image" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
         </picture>
         <div class="logo__text-wrapper">
@@ -45,7 +45,33 @@
     </ul>
     <a href="#callback" class="main-header__callback-btn">Заказать звонок</a>
   </header>
-  <main></main>
+  <main>
+    <section class="main-screen">
+      <div class="main-screen__inner-wrapper">
+        <div class="main-screen__text-wrapper">
+          <h2 class="main-screen__title">Печатные платы</h2>
+          <p class="main-screen__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="main-screen__main-btn" href="#anchor">
+            <span class="main-screen__btn-text main-screen__btn-text--non-mobile">Получить бесплатную консультацию</span>
+            <span class="main-screen__btn-text main-screen__btn-text--mobile">Бесплатная консультация</span>
+          </a>
+          <a class="main-screen__scroll-btn" href="#anchor">Скролл вниз</a>
+        </div>
+        <div class="main-screen__img-wrapper">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/circuits-mobile.png">
+            <source media="(max-width: 1023px)" srcset="img/circuits-tablet.png">
+            <img class="main-screen__img" src="img/circuits-desktop.png" width="705" height="515" alt="Изображение печатных плат" loading="lazy">
+            </picture>
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/bg-triangle-main-mobile.svg">
+            <source media="(max-width: 1023px)" srcset="img/bg-triangle-main-tablet.svg">
+            <img class="main-screen__bg-img" src="img/bg-triangle-main.svg" alt="Изображение декоративных треугольников" width="1920" height="881">
+          </picture>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer class="main-footer">
     <div class="main-footer__upper-part-wrapper">
       <h3 class="visually-hidden">Upper footer</h3>
