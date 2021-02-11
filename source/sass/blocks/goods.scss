@@ -1,0 +1,259 @@
+.goods {
+  background-color: $dark-grey;
+}
+
+.goods__wrapper {
+  @include desktop-space;
+  padding-top: 93px;
+  padding-bottom: 127px;
+}
+
+.goods__title {
+  @include reset-space;
+  @include roboto-condensed-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  color: $white;
+
+  margin-bottom: 47px;
+}
+
+.goods__list {
+  @include clear-list;
+  @include flex-row;
+  flex-wrap: wrap;
+}
+
+.goods__item {
+  @include flex-column;
+
+  margin-right: 30px;
+
+  position: relative;
+
+  z-index: 1;
+
+  &::before {
+    content: "";
+
+    opacity: 0.2;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:nth-child(1) {
+    &::before {
+      background-image: url("../../img/bg-goods-desktop-1.png");
+    }
+  }
+
+  &:nth-child(2) {
+    &::before {
+      background-image: url("../../img/bg-goods-desktop-2.png");
+    }
+  }
+
+  &:nth-child(3) {
+    &::before {
+      background-image: url("../../img/bg-goods-desktop-3.png");
+    }
+  }
+}
+
+.goods__link {
+  @include flex-column;
+
+  width: 370px;
+  min-height: 620px;
+
+  text-decoration: none;
+  color: $white;
+
+  z-index: 2;
+}
+
+.goods__name {
+  @include reset-space;
+  @include roboto-condensed-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: $white;
+
+  margin-top: 53px;
+  margin-left: 44px;
+  margin-right: 44px;
+
+  max-width: 163px;
+}
+
+.goods__btn {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+  width: 63px;
+  height: 63px;
+  background-color: $blue;
+
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: auto;
+}
+
+.goods__arrow {
+  fill: $white;
+}
+
+.goods__link:hover,
+.goods__link:focus {
+  outline: 1px solid $blue;
+}
+
+.goods__link:hover .goods__btn,
+.goods__link:focus .goods__btn {
+  background-color: $white;
+}
+
+.goods__link:hover .goods__name,
+.goods__link:focus .goods__name {
+  color: $blue;
+}
+
+
+.goods__link:hover .goods__arrow,
+.goods__link:focus .goods__arrow {
+  fill: $blue;
+}
+
+@media (max-width: $tablet-width-only) {
+  .goods {
+    @include empty-rule;
+  }
+
+  .goods__wrapper {
+    @include tablet-space;
+    padding-top: 53px;
+    padding-bottom: 78px;
+  }
+
+  .goods__title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .goods__list {
+    @include empty-rule;
+  }
+
+  .goods__item {
+    margin-right: 0;
+    margin-bottom: 35px;
+
+    &:nth-child(1) {
+      &::before {
+        background-image: url("../../img/bg-goods-tablet-1.png");
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        background-image: url("../../img/bg-goods-tablet-2.png");
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        background-image: url("../../img/bg-goods-tablet-3.png");
+      }
+    }
+  }
+
+  .goods__link {
+    min-width: 715px;
+    width: auto;
+    min-height: 256px;
+  }
+
+  .goods__name {
+    margin-top: 43px;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+
+  .goods__btn {
+    @include empty-rule;
+  }
+
+  .goods__arrow {
+    @include empty-rule;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .goods {
+    @include empty-rule;
+  }
+
+  .goods__wrapper {
+    margin: 0 15px;
+    padding-bottom: 64px;
+  }
+
+  .goods__title {
+    font-size: 28px;
+    line-height: 39px;
+
+    margin-bottom: 37px;
+  }
+
+  .goods__list {
+    @include empty-rule;
+  }
+
+  .goods__item {
+    margin-bottom: 30px;
+
+    &:nth-child(1) {
+      &::before {
+        background-image: url("../../img/bg-goods-mobile-1.png");
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        background-image: url("../../img/bg-goods-mobile-2.png");
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        background-image: url("../../img/bg-goods-mobile-3.png");
+      }
+    }
+  }
+
+  .goods__link {
+    min-width: 290px;
+  }
+
+  .goods__name {
+    margin-top: 23px;
+    margin-left: 34px;
+    margin-right: 34px;
+  }
+
+  .goods__btn {
+    @include empty-rule;
+  }
+
+  .goods__arrow {
+    @include empty-rule;
+  }
+}

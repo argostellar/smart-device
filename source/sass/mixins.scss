@@ -113,6 +113,14 @@
   }
 }
 
+@mixin goods-bg-img($number) {
+  background-image: url("../../img/bg-goods-desktop-@{$number}.png");
+
+  &:nth-child(n) {
+    background-image: linear-gradient(rgba($bg-grey, 0.2), rgba($bg-grey, 0.2));
+  }
+}
+
 @mixin empty-rule {
   hyphens: auto;
 }
