@@ -113,11 +113,46 @@
   }
 }
 
+@mixin active-states-bg-blue {
+  &:hover,
+  &:focus {
+    color: $blue;
+    background-color: $white;
+    outline: 1px solid rgba($white, 0.9);
+    outline-offset: 1px;
+  }
+
+  &:active {
+    color: $dark-grey;
+  }
+}
+
 @mixin goods-bg-img($number) {
   background-image: url("../../img/bg-goods-desktop-@{$number}.png");
 
   &:nth-child(n) {
     background-image: linear-gradient(rgba($bg-grey, 0.2), rgba($bg-grey, 0.2));
+  }
+}
+
+@mixin form-input {
+  border: none;
+  background-color: rgba($white, 0.1);
+  padding: 14px 17px;
+  color: $white;
+
+  &::placeholder {
+    color: $white;
+  }
+
+  @include form-active;
+}
+
+@mixin form-active {
+  &:hover,
+  &:focus {
+    background-color: rgba($white, 0.2);
+    outline: 1px solid $white;
   }
 }
 
@@ -153,7 +188,7 @@
   position: relative;
 
   &::after {
-    content: "" + $name;
+    content: ""+ $name;
     font-size: 24px;
     color: $white;
     text-shadow: 5px 5px 3px #111111;

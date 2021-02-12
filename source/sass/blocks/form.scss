@@ -1,0 +1,284 @@
+.form {
+  background-color: $blue;
+  padding-top: 96px;
+  padding-bottom: 113px;
+}
+
+.form__bg-wrap {
+  @include desktop-container;
+  @include flex-row;
+}
+
+.form__img {
+  max-height: 288px;
+  margin-right: 115px;
+  margin-left: -115px;
+  margin-top: calc(161px - 96px);
+}
+
+.form__form {
+  @include flex-column;
+}
+
+.form__title {
+  @include reset-space;
+  @include roboto-condensed-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  color: $white;
+  margin-bottom: 7px;
+}
+
+.form__text {
+  @include reset-space;
+  color: $white;
+
+  margin-bottom: 49px;
+}
+
+.form__upper-wrapper {
+  @include flex-row;
+  margin-bottom: 40px;
+}
+
+.form__name-wrap {
+  input {
+    @include form-input;
+    min-width: 270px;
+    min-height: 50px;
+  }
+
+  margin-right: 31px;
+}
+
+.form__tel-wrap {
+  input {
+    @include form-input;
+    min-width: 269px;
+    min-height: 50px;
+  }
+}
+
+.form__textarea-wrap {
+  textarea {
+    @include reset-space;
+    @include form-input;
+    min-width: 570px;
+    width: auto;
+    min-height: 154px;
+
+    resize: none;
+  }
+
+  margin-bottom: 43px;
+}
+
+.form__lower-wrapper {
+  @include flex-row;
+
+  button {
+    @include active-states-bg-blue;
+    @include roboto-condensed-font;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $white;
+
+    border-radius: 5px;
+    border: 1px solid $white;
+    background-color: transparent;
+
+    padding: 14px 20px;
+
+    min-width: 270px;
+  }
+}
+
+.form__checkbox-wrap {
+  margin-left: 38px;
+
+  width: 270px;
+  padding-left: 40px;
+
+  label {
+    font-size: 14px;
+    line-height: 16px;
+
+    color: $white;
+    opacity: 0.8;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -30px;
+
+      width: 16px;
+      height: 16px;
+
+      background-image: url("../../img/icon-checkbox-empty.svg");
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $dark-grey;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked + label {
+      &::before {
+        background-image: url("../../img/icon-checkbox-check.svg");
+      }
+    }
+  }
+}
+
+
+@media (max-width: $tablet-width-only) {
+  .form {
+    padding-top: 83px;
+    padding-bottom: 103px;
+  }
+
+  .form__bg-wrap {
+    @include tablet-container;
+    padding: 0 calc(92px - 25px);
+  }
+
+  .form__img {
+    display: none;
+  }
+
+  .form__form {
+    padding-left: 5px;
+  }
+
+  .form__title {
+    font-size: 32px;
+    line-height: 45px;
+
+    margin-left: -5px;
+  }
+
+  .form__text {
+    margin-bottom: 50px;
+  }
+
+  .form__upper-wrapper {
+    width: 100%;
+    margin-bottom: 42px;
+  }
+
+  .form__name-wrap {
+    input {
+      min-width: 280px;
+      min-height: 52px;
+    }
+  }
+
+  .form__tel-wrap {
+    input {
+      min-width: 280px;
+      min-height: 52px;
+    }
+  }
+
+  .form__textarea-wrap {
+    textarea {
+      min-width: 590px;
+      min-height: 159px;
+    }
+  }
+
+  .form__lower-wrapper {
+    @include empty-rule;
+  }
+
+  .form__checkbox-wrap {
+    @include empty-rule;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .form {
+    padding-top: 33px;
+    padding-bottom: 41px;
+  }
+
+  .form__bg-wrap {
+    padding: 0;
+
+    margin: 0 15px;
+  }
+
+  .form__img {
+    @include empty-rule;
+  }
+
+  .form__form {
+    padding: 0;
+  }
+
+  .form__title {
+    font-size: 28px;
+    line-height: 39px;
+
+    margin-left: 0;
+  }
+
+  .form__text {
+    @include empty-rule;
+  }
+
+  .form__upper-wrapper {
+    @include flex-column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .form__name-wrap {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .form__name-wrap,
+  .form__tel-wrap {
+    input {
+      min-width: 290px;
+    }
+  }
+
+  .form__textarea-wrap {
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    textarea {
+      min-width: 290px;
+      min-height: 104px;
+    }
+  }
+
+  .form__lower-wrapper {
+    @include flex-column;
+  }
+
+  .form__checkbox-wrap {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
