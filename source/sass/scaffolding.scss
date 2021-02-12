@@ -12,6 +12,8 @@ body {
   min-width: $mobile-size;
 
   overflow-x: hidden;
+
+  position: relative;
 }
 
 img {
@@ -50,4 +52,24 @@ input[type="radio"].visually-hidden,
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba($black, 0.5);
+
+  z-index: 10;
+}
+
+.modal-open {
+  display: block;
+}
+
+.modal-hide {
+  display: none;
 }

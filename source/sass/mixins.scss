@@ -148,6 +148,11 @@
   @include form-active;
 }
 
+@mixin feedback-input {
+  @include form-input;
+  padding: 14px 24px;
+}
+
 @mixin form-active {
   &:hover,
   &:focus {

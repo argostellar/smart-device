@@ -1,0 +1,156 @@
+.feedback {
+  position: fixed;
+  top: 136px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 490px;
+  min-height: 605px;
+  background-color: $blue;
+
+  z-index: 20;
+}
+
+.feedback__bg-wrap {
+  position: relative;
+  padding: 33px 36px 39px;
+}
+
+.feedback__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+
+  width: 17px;
+  height: 17px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.feedback__form {
+  @include flex-column;
+}
+
+.feedback__title {
+  @include reset-space;
+  @include roboto-condensed-font;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+
+  color: $white;
+
+  margin-bottom: 20px;
+}
+
+.feedback__text {
+  @include reset-space;
+
+  color: $white;
+
+  margin-bottom: 30px;
+  max-width: 380px;
+}
+
+.feedback__name-wrap,
+.feedback__tel-wrap {
+  @include flex-row;
+  margin-bottom: 30px;
+
+  input {
+    @include feedback-input;
+    flex-grow: 1;
+    min-width: 269px;
+    min-height: 50px;
+  }
+}
+
+.feedback__textarea-wrap {
+  @include flex-column;
+  margin-bottom: 30px;
+
+  textarea {
+    @include reset-space;
+    @include feedback-input;
+    flex-grow: 1;
+
+    min-height: 104px;
+
+    resize: none;
+  }
+}
+
+.feedback__btn {
+  @include active-states-bg-blue;
+  @include roboto-condensed-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $white;
+
+  border-radius: 5px;
+  border: 1px solid $white;
+  background-color: transparent;
+
+  padding: 14px 27px;
+
+  margin-bottom: 35px;
+
+  min-width: 270px;
+}
+
+
+.feedback__checkbox-wrap {
+  padding-left: 48px;
+
+  input {
+    display: none;
+
+    &:checked + label {
+      &::before {
+        background-image: url("../../img/icon-checkbox-check.svg");
+      }
+    }
+  }
+
+  label {
+    max-width: 337px;
+
+    margin-right: calc(64px - 39px);
+
+    font-size: 14px;
+    line-height: 16px;
+
+    color: $white;
+    opacity: 0.8;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: -48px;
+
+      width: 16px;
+      height: 16px;
+
+      background-image: url("../../img/icon-checkbox-empty.svg");
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $dark-grey;
+    }
+  }
+}
