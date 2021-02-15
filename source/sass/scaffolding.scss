@@ -66,10 +66,14 @@ input[type="radio"].visually-hidden,
   z-index: 10;
 }
 
-.modal-open {
+.opened {
   display: block;
 }
 
-.modal-hide {
+.hidden {
+  display: none;
+}
+
+.modal-nojs {
   display: none;
 }

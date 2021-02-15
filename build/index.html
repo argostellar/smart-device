@@ -92,17 +92,17 @@
     </ul>
     <a href="#callback" class="main-header__callback-btn">Заказать звонок</a>
   </header>
-  <main>
+  <main class="main">
     <section class="main-screen">
       <div class="main-screen__inner-wrapper">
         <div class="main-screen__text-wrapper">
           <h2 class="main-screen__title">Печатные платы</h2>
           <p class="main-screen__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="main-screen__main-btn" href="#anchor">
+          <a class="main-screen__main-btn" href="#page-form">
             <span class="main-screen__btn-text main-screen__btn-text--non-mobile">Получить бесплатную консультацию</span>
             <span class="main-screen__btn-text main-screen__btn-text--mobile">Бесплатная консультация</span>
           </a>
-          <a class="main-screen__scroll-btn" href="#anchor">Скролл вниз</a>
+          <a class="main-screen__scroll-btn" href="#advantages">Скролл вниз</a>
         </div>
         <div class="main-screen__img-wrapper">
           <picture>
@@ -118,7 +118,7 @@
         </div>
       </div>
     </section>
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <h3 class="visually-hidden">Блок с преимуществами</h3>
       <ul class="advantages__list">
         <li class="advantages__item">
@@ -199,7 +199,7 @@
         </ul>
       </div>
     </section>
-    <section class="form">
+    <section class="form" id="page-form">
       <div class="form__bg-wrap">
         <img class="form__img" src="img/form-paper-airplane.png" width="511" height="288" alt="Изображение бумажного самолётика">
         <form class="form__form">
@@ -269,10 +269,10 @@
       <div class="main-footer__info-wrapper">
         <div class="main-footer__sections-wrapper">
           <h3 class="main-footer__title">Разделы сайта</h3>
-          <button class="main-footer__btn main-footer__btn--hide">
+          <button class="main-footer__btn main-footer__btn--hide main-footer__btn--nojs">
             <span class="visually-hidden">Скрыть</span>
           </button>
-          <ul class="main-footer__sections-list">
+          <ul class="main-footer__list main-footer__list--sections">
             <li class="main-footer__sections-item">
               <a href="#" class="main-footer__sections-link">О компании</a>
             </li>
@@ -298,10 +298,10 @@
         </div>
         <div class="main-footer__contact-details-wrapper">
           <h3 class="main-footer__title">Наш офис</h3>
-          <button class="main-footer__btn main-footer__btn--hide">
+          <button class="main-footer__btn main-footer__btn--hide main-footer__btn--nojs">
             <span class="visually-hidden">Скрыть</span>
           </button>
-          <ul class="main-footer__contact-details-list">
+          <ul class="main-footer__list main-footer__list--contact-details">
             <li class="main-footer__contact-details-item">
               <a href="#" class="main-footer__contact-details-link">г. Мытищи, Олимпийский проспект, д.10</a>
             </li>
@@ -319,7 +319,6 @@
       </div>
     </div>
     <div class="main-footer__lower-part-wrapper">
-      <h3 class="visually-hidden">Lower footer: ul или не ul?</h3>
       <ul class="main-footer__info-list">
         <li class="main-footer__info-item">
           <p class="main-footer__info-text">Все права защищены</p>
@@ -336,7 +335,7 @@
       </ul>
     </div>
   </footer>
-  <section class="feedback">
+  <section class="feedback hidden modal-nojs">
     <div class="feedback__bg-wrap">
       <button class="feedback__close-btn" type="button">
         <svg class="feedback__close-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
@@ -348,13 +347,13 @@
         <h3 class="feedback__title">Закажите звонок</h3>
         <p class="feedback__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <div class="feedback__name-wrap">
-          <input type="text" name="" placeholder="Имя">
+          <input type="text" name="username" placeholder="Имя" autofocus="">
         </div>
         <div class="feedback__tel-wrap">
-          <input type="tel" name="" placeholder="Телефон">
+          <input type="tel" name="telephone" placeholder="Телефон">
         </div>
         <div class="feedback__textarea-wrap">
-          <textarea placeholder="Ваш вопрос"></textarea>
+          <textarea name="question" placeholder="Ваш вопрос"></textarea>
         </div>
         <button class="feedback__btn" type="submit">Отправить</button>
         <div class="feedback__checkbox-wrap">
@@ -364,7 +363,8 @@
       </form>
     </div>
   </section>
-  <div class="overlay"></div>
+  <div class="overlay hidden modal-nojs"></div>
+  <script src="js/script.js" async=""></script>
 </body>
 
 </html>
