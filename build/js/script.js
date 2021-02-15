@@ -47,6 +47,9 @@
   const pageFormBlock = document.getElementById('page-form');
   const adviceBtn = main.querySelector('.main-screen__main-btn');
 
+  const formTelWrap = pageFormBlock.querySelector('.form__tel-wrap');
+  const formTelInput = formTelWrap.querySelector('input');
+
   const open = function (hiddenBlock) {
     hiddenBlock.classList.remove('hidden');
   };
@@ -87,6 +90,73 @@
   const scrollToBlock = function (block) {
     block.scrollIntoView({ block: "center", behavior: "smooth" })
   };
+
+  // <------------------VALIDATION------------------->
+  // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+
+  const cleanerTelRegExp = new RegExp('[\D\s\._\-]+', 'g');
+  const countTelRegExp = new RegExp('[\w\s]{17}', 'g');
+
+  const initaialTelValue = '+7 (';
+
+  const telValidationRule = 'Введите телефон в формате "+7 (XXX) XXX XXXX"';
+
+  const setInputInitialState = (input) => {
+    input.value = initaialTelValue;
+  };
+
+  const onInputFocusSetValue = (evt) => {
+    if (evt.target.value === '') {
+      setInputInitialState(evt.target);
+    }
+  };
+
+  const onInputBlurSetValue = (evt) => {
+    if (evt.target.value === initaialTelValue) {
+      evt.target.value = '';
+    }
+  };
+
+  const getInputValue = (input) => {
+    const currentValue = input.value;
+  };
+
+  const formatValue = (value) => {
+    let currentValue = value.replace(cleanerTelRegExp, '');
+    if (value.length === initaialTelValue.length + 3) {
+      currentValue = `${value}) `;
+    } else if (value.length === 12) {
+      currentValue = `${value} `;
+    } else if (value.length >= 17) {
+      currentValue = value.slice(0, 17);
+    }
+    return currentValue;
+  };
+
+  const onInputKeyupFormatValue = (evt) => {
+    const unformatedValue = evt.target.value;
+    const formatedValue = formatValue(unformatedValue);
+
+    evt.target.value = formatedValue;
+    console.log(evt.target.value);
+  };
+
+  const validateTelInput = (input) => {
+    input.addEventListener('focus', onInputFocusSetValue);
+    input.addEventListener('keyup', onInputKeyupFormatValue);
+    input.addEventListener('blur', onInputBlurSetValue)
+    input.setCustomValidity(telValidationRule);
+  };
+
+  const setValidation = () => {
+    validateTelInput(telInput);
+    validateTelInput(formTelInput);
+  };
+
+  setValidation();
+
+  // /VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\
+  // <------------------VALIDATION------------------->
 
   // <--------------FOOTER LISTS----------------------->
   // VVVVVVVVVVVVVVVVVVVVVVV
@@ -149,10 +219,8 @@
       const condition = (btn !== button && defineChangeBtnsState(button, btn));
 
       if (btn === button) {
-        console.log('EQUAL BUTTONS: CONTINUE PROCEDURE...');
         continue;
       } else if (condition) {
-        console.log('BONK DRONE HAS FOUND A HORNY');
         changeBtnTypeToShow(btn);
       }
 
