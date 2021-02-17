@@ -30,6 +30,8 @@
   const modalFeedback = document.querySelector('.feedback');
   const overlay = document.querySelector('.overlay');
 
+  const feedbackForm = modalFeedback.querySelector('.feedback__form');
+
   const nameWrap = modalFeedback.querySelector('.feedback__name-wrap');
   const telWrap = modalFeedback.querySelector('.feedback__tel-wrap');
   const textareaWrap = modalFeedback.querySelector('.feedback__textarea-wrap');
@@ -45,6 +47,8 @@
   const scrollBtn = main.querySelector('.main-screen__scroll-btn');
 
   const pageFormBlock = document.getElementById('page-form');
+  const pageForm = pageFormBlock.querySelector('.form__form');
+
   const adviceBtn = main.querySelector('.main-screen__main-btn');
 
   const formTelWrap = pageFormBlock.querySelector('.form__tel-wrap');
@@ -96,6 +100,7 @@
 
   const cleanerTelRegExp = new RegExp('[\D\s\._\-]+', 'g');
   const countTelRegExp = new RegExp('[\w\s]{17}', 'g');
+  // const telRegExp = new RegExp('(\+(7)\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}){1}', 'g');
 
   const initaialTelValue = '+7 (';
 
@@ -141,11 +146,40 @@
     console.log(evt.target.value);
   };
 
+  const onInputValidate = (evt) => {
+    evt.target.setCustomValidity(telValidationRule);
+    evt.target.style.outline = '2px solid red';
+    console.log('INVALID!');
+    console.log(evt.target);
+    console.log(evt.target.value);
+  };
+
+  // const onInputCheckValidity = (evt) => {
+  //   if (evt.target.checkValidity()) {
+  //     evt.target.style.outline = 'none';
+  //     evt.target.removeEventListener('invalid', onInputValidate);
+  //   } else {
+  //     evt.target.addEventListener('invalid', onInputValidate);
+  //   }
+  // };
+
   const validateTelInput = (input) => {
+    // input.removeAttribute('pattern');
+    // обнулили паттерн, теперь нужно сделать проверку по регулярке через checkValidity
     input.addEventListener('focus', onInputFocusSetValue);
     input.addEventListener('keyup', onInputKeyupFormatValue);
-    input.addEventListener('blur', onInputBlurSetValue)
-    input.setCustomValidity(telValidationRule);
+    input.addEventListener('blur', onInputBlurSetValue);
+    input.addEventListener('invalid', onInputValidate);
+    // input.addEventListener('input', onInputCheckValidity);
+  };
+
+  const onFormSubmit = (evt) => {
+    evt.preventDefault();
+    alert('Успешная отправка!');
+  };
+
+  const validateForm = (form) => {
+    form.addEventListener('submit', onFormSubmit);
   };
 
   const setValidation = () => {
@@ -153,6 +187,12 @@
     validateTelInput(formTelInput);
   };
 
+  const setFormValidation = () => {
+    validateForm(feedbackForm);
+    validateForm(pageForm);
+  };
+
+  setFormValidation();
   setValidation();
 
   // /VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\
