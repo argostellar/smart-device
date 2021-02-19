@@ -35,6 +35,14 @@
   max-width: 984px;
 }
 
+.about-company__full-text {
+  display: inline;
+}
+
+.about-company__hidden-text {
+  display: none;
+}
+
 .about-company__btn {
   @include roboto-condensed-font;
   text-decoration: none;
@@ -48,7 +56,7 @@
 
   border-radius: 5px;
   border: 1px solid $blue;
-  padding: 14px calc(735px - 685px);
+  padding: 14px 50px;
   margin-top: 18px;
 }
 
@@ -61,15 +69,21 @@
 @media (max-width: $tablet-width-only) {
   .about-company {
     @include tablet-container;
-    margin-bottom: 83px;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-bottom: 75px;
   }
 
   .about-company__img {
-    @include empty-rule;
+    margin-top: -2px;
+    margin-left: -8px;
+
+    width: auto;
+    height: 362px;
   }
 
   .about-company__wrapper {
-    @include empty-rule;
+    margin-left: -33px;
   }
 
   .about-company__title {
@@ -79,11 +93,26 @@
   }
 
   .about-company__text {
-    margin-bottom: 28px;
+    margin-bottom: 21px;
+    margin-left: 2px;
+  }
+
+  .about-company__full-text {
+    display: none;
+  }
+
+  .about-company__hidden-text {
+    display: inline;
   }
 
   .about-company__btn {
-    @include empty-rule;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 49px;
+    padding-right: 50px;
+
+    margin-top: 20px;
+    margin-left: 3px;
   }
 }
 

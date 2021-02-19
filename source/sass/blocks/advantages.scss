@@ -43,12 +43,17 @@
   // margin-bottom: 15px;
 }
 
+.advantages__icon-wrapper {
+  min-width: 35px;
+  height: 35px;
+
+  margin-bottom: 20px;
+}
+
 .advantages__icon {
   fill: $blue;
-  margin-bottom: 20px;
 
-  &[height="31"] {
-    margin-bottom: 22px;
+  &[data-icon-name="detective"] {
     margin-top: 2px;
   }
 }
@@ -74,8 +79,11 @@
 
 @media (max-width: $tablet-width-only) {
   .advantages {
-    margin-top: calc(740px - 686px);
-    margin-bottom: 60px;
+    margin-top: 0;
+    margin-bottom: 28px;
+
+    padding-top: 54px;
+    padding-left: 25px;
   }
 
   .advantages__list {
@@ -86,26 +94,56 @@
 
   .advantages__item {
     min-width: 345px;
-    width: calc(50% - 30px);
+    min-height: 232px;
+    width: calc(50% - 45px);
 
-    padding-left: 26px;
-    padding-right: 26px;
+    padding-left: 25px;
+    padding-right: 21px;
     padding-top: 24px;
     padding-bottom: 12px;
+
+    margin: 0;
+    margin-bottom: 30px;
+    margin-right: 30px;
 
     border-left: 2px solid $blue;
   }
 
   .advantages__title {
-    margin-bottom: 22px;
+    margin-bottom: 10px;
+  }
+
+  .advantages__icon-wrapper {
+    min-width: 32px;
+    height: 32px;
+
+    margin-bottom: 9px;
   }
 
   .advantages__icon {
-    margin-bottom: 13px;
+    &[data-icon-name="hired"] {
+      width: 32px;
+      height: 32px;
+    }
+
+    &[data-icon-name="detective"] {
+      width: 30px;
+      height: 26px;
+
+      margin-top: 4px;
+    }
+
+    &[data-icon-name="tag"] {
+      width: 32px;
+      height: 32px;
+
+      margin-top: 1px;
+    }
   }
 
   .advantages__text {
-    @include empty-rule;
+    margin: 0;
+    margin-bottom: 5px;
   }
 
   .advantages__item:hover {

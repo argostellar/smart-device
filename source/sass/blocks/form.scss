@@ -173,13 +173,15 @@
 
 @media (max-width: $tablet-width-only) {
   .form {
-    padding-top: 83px;
+    padding-top: 80px;
     padding-bottom: 103px;
+
+    background-image: none;
   }
 
   .form__bg-wrap {
     @include tablet-container;
-    padding: 0 calc(92px - 25px);
+    padding: 0 67px;
   }
 
   .form__img {
@@ -187,7 +189,7 @@
   }
 
   .form__form {
-    padding-left: 5px;
+    padding-left: 0;
   }
 
   .form__title {
@@ -195,19 +197,24 @@
     line-height: 45px;
 
     margin-left: -5px;
+    margin-bottom: 16px;
   }
 
   .form__text {
-    margin-bottom: 50px;
+    padding-left: 0;
+    margin-bottom: 54px;
   }
 
   .form__upper-wrapper {
     width: 100%;
     margin-bottom: 42px;
+    padding-left: 0;
   }
 
   .form__name-wrap {
     input {
+      padding-top: 11px;
+      padding-bottom: 17px;
       min-width: 280px;
       min-height: 52px;
     }
@@ -215,12 +222,17 @@
 
   .form__tel-wrap {
     input {
+      padding-top: 11px;
+      padding-bottom: 17px;
       min-width: 280px;
       min-height: 52px;
     }
   }
 
   .form__textarea-wrap {
+    padding-left: 0;
+    margin-bottom: 39px;
+
     textarea {
       min-width: 590px;
       min-height: 159px;
@@ -228,11 +240,15 @@
   }
 
   .form__lower-wrapper {
-    @include empty-rule;
+    padding-left: 0;
+
+    button {
+      min-width: 280px;
+    }
   }
 
   .form__checkbox-wrap {
-    @include empty-rule;
+    padding-left: 43px;
   }
 }
 

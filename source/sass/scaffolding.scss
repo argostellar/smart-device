@@ -93,4 +93,11 @@ input[type="radio"].visually-hidden,
     bottom -151px left 0,
     top 45px left 202px;
   background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../../img/bg-advantages-triangle-big.svg");
+    background-size: auto;
+    background-position: bottom 75px left 211px;
+    background-repeat: no-repeat;
+  }
 }

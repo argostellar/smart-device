@@ -179,14 +179,17 @@
     align-items: center;
     width: 100%;
     margin-top: 19px;
-    padding: 0 25px;
-    padding-bottom: 26px;
+
+    padding-top: 0;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 0;
   }
 
   .main-footer__info-wrapper {
     justify-content: space-between;
     margin-top: 38px;
-    margin-bottom: 33px;
+    margin-bottom: 36px;
     padding: 0 25px;
     width: 100%;
   }
@@ -194,10 +197,18 @@
   .main-footer__sections-wrapper {
     margin-left: 0;
     margin-right: auto;
+
+    .main-footer__title {
+      margin-left: 2px;
+    }
   }
 
   .main-footer__contact-details-wrapper {
-    @include empty-rule;
+    margin-right: -4px;
+
+    .main-footer__title {
+      margin-left: 2px;
+    }
   }
 
   .main-footer__lower-part-wrapper {
@@ -232,7 +243,7 @@
   }
 
   .main-footer__sections-item {
-    @include empty-rule;
+    padding-left: 0;
   }
 
   .main-footer__sections-link {
@@ -246,27 +257,28 @@
   .main-footer__info-list {
     width: auto;
     padding: 0 25px;
+    padding-right: 10px;
   }
 
   .main-footer__info-item {
     margin-top: 21px;
     margin-bottom: 24px;
 
-    &:first-child {
+    &[data-footer-number="1"] {
       display: none;
     }
 
-    &:nth-child(2) {
+    &[data-footer-number="2"] {
       position: absolute;
-      top: 10px;
-      left: 40%;
+      top: 16px;
+      left: 328px;
     }
 
-    &:nth-child(3) {
+    &[data-footer-number="3"] {
       @include empty-rule;
     }
 
-    &:last-child {
+    &[data-footer-number="4"] {
       @include empty-rule;
     }
   }
@@ -443,11 +455,11 @@
   .main-footer__info-item {
     @include empty-rule;
 
-    &:first-child {
+    &[data-footer-number="1"] {
       display: none;
     }
 
-    &:nth-child(2) {
+    &[data-footer-number="2"] {
       position: absolute;
       top: 96px;
       left: 45px;
@@ -455,8 +467,8 @@
       min-width: 233px;
     }
 
-    &:nth-child(3),
-    &:last-child {
+    &[data-footer-number="3"],
+    &[data-footer-number="4"]{
       margin: 0;
       margin-bottom: 21px;
     }

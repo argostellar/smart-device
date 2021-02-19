@@ -34,3 +34,10 @@
   @include empty-rule;
 }
 
+@media (max-width: $tablet-width-only) {
+  .social__list {
+    margin-top: 2px;
+    margin-right: -9px;
+  }
+}
+

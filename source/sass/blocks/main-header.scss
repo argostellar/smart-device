@@ -17,14 +17,14 @@
   @include flex-row;
   margin-left: auto;
   margin-right: 0;
-
-  li:first-child {
-    margin-right: 86px;
-  }
 }
 
 .main-header__contacts-item {
   margin: 0;
+
+  &[data-header-list-item="email"] {
+    margin-right: 86px;
+  }
 }
 
 .main-header__contacts-link {
@@ -81,6 +81,7 @@
   .main-header {
     @include tablet-container;
     margin-top: 20px;
+    margin-right: 8px;
   }
 
   .main-header__logo-wrapper {
@@ -93,6 +94,11 @@
 
   .main-header__contacts-item {
     margin: 0;
+
+    &[data-header-list-item="email"] {
+      margin-right: 34px;
+      margin-bottom: 4px;
+    }
   }
 
   .main-header__contacts-link {
@@ -103,11 +109,16 @@
     @include empty-rule;
 
     &--email {
-      margin-right: 33px;
+      width: 25px;
+      height: 18px;
+      margin-right: 0;
     }
 
     &--tel {
+      width: 24px;
+      height: 24px;
       margin-right: 0;
+      margin-top: -2px;
     }
   }
 
