@@ -138,7 +138,8 @@
   }
 
   .main-header__logo-wrapper {
-    @include empty-rule;
+    margin-top: -3px;
+    padding-left: 2px;
   }
 
   .main-header__contacts-list {
@@ -147,6 +148,11 @@
 
   .main-header__contacts-item {
     margin: 0;
+
+    &[data-header-list-item="email"] {
+      margin-right: 1px;
+      margin-bottom: 7px;
+    }
   }
 
   .main-header__contacts-link {

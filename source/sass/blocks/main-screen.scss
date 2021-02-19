@@ -221,14 +221,26 @@
 
 @media (max-width: $mobile-width-only) {
   .main-screen {
+    background-image:
+      url("../../img/bg-triangle-main-mobile.svg"),
+      url("../../img/bg-main-screen.png");
+    background-position:
+      top 29px right 0,
+      center;
+    background-size: auto, cover;
+    background-repeat: no-repeat;
     z-index: 1;
+
+    padding-bottom: 70px;
   }
 
   .main-screen__inner-wrapper {
     @include reset-space;
     @include flex-column;
-    margin: 0 15px;
-    padding-top: 192px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 192px;
+    margin-bottom: 0;
   }
 
   .main-screen__text-wrapper {
@@ -243,6 +255,8 @@
     font-size: 40px;
     line-height: 47px;
 
+    margin-top: 15px;
+
     max-width: 277px;
   }
 
@@ -251,10 +265,19 @@
     line-height: 25px;
 
     max-width: 245px;
+
+    margin-bottom: 39px;
+
+    &::before {
+      top: 14px;
+    }
   }
 
   .main-screen__main-btn {
     margin: 0;
+    margin-left: 3px;
+    padding-left: 33px;
+    padding-right: 31px;
     align-self: stretch;
   }
 
@@ -276,9 +299,9 @@
   }
 
   .main-screen__img {
-    max-width: 301px;
-    top: -90px;
-    left: 42px;
+    max-width: 296px;
+    top: -71px;
+    left: 48px;
     z-index: 2;
   }
 }

@@ -68,12 +68,12 @@
   background-color: $blue;
 }
 
-.advantages__item:hover > .advantages__icon {
+.advantages__item:hover .advantages__icon {
   fill: $white;
 }
 
-.advantages__item:hover > .advantages__title,
-.advantages__item:hover > .advantages__text {
+.advantages__item:hover .advantages__title,
+.advantages__item:hover .advantages__text {
   color: $white;
 }
 
@@ -153,8 +153,9 @@
 
 @media (max-width: $mobile-width-only) {
   .advantages {
-    margin-top: calc(684px - 647px);
+    margin-top: 0;
     margin-bottom: 60px;
+    padding-top: 37px;
   }
 
   .advantages__list {

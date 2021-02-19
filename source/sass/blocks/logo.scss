@@ -43,6 +43,11 @@
 
 
 @media (max-width: $mobile-width-only) {
+  .logo__image {
+    width: 38px;
+    height: 38px;
+  }
+
   .logo__maintext {
     @include empty-rule;
 
