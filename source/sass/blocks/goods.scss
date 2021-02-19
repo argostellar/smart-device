@@ -4,8 +4,9 @@
 
 .goods__wrapper {
   @include desktop-space;
-  padding-top: 93px;
+  padding-top: 88px;
   padding-bottom: 127px;
+  padding-left: 144px;
 }
 
 .goods__title {
@@ -17,7 +18,7 @@
 
   color: $white;
 
-  margin-bottom: 47px;
+  margin-bottom: 52px;
 }
 
 .goods__list {
@@ -47,19 +48,19 @@
     bottom: 0;
   }
 
-  &:nth-child(1) {
+  &[data-number="1"] {
     &::before {
       background-image: url("../../img/bg-goods-desktop-1.png");
     }
   }
 
-  &:nth-child(2) {
+  &[data-number="2"] {
     &::before {
       background-image: url("../../img/bg-goods-desktop-2.png");
     }
   }
 
-  &:nth-child(3) {
+  &[data-number="3"] {
     &::before {
       background-image: url("../../img/bg-goods-desktop-3.png");
     }
@@ -87,7 +88,7 @@
 
   color: $white;
 
-  margin-top: 53px;
+  margin-top: 50px;
   margin-left: 44px;
   margin-right: 44px;
 

@@ -1,7 +1,6 @@
 .advantages {
-  background-color: $white;
-  margin-top: 110px;
-  margin-bottom: 95px;
+  padding-top: 96px;
+  margin-bottom: 76px;
 }
 
 .advantages__list {
@@ -9,9 +8,13 @@
   @include desktop-container;
   @include flex-row;
   flex-wrap: wrap;
+
+  padding-left: 128px;
 }
 
 .advantages__item {
+  @include flex-column;
+
   background-color: $white;
   z-index: 2;
 
@@ -19,6 +22,7 @@
   border-left: 3px solid $blue;
   width: 47%;
   max-width: 570px;
+  min-height: 299px;
 
   margin: 15px;
 
@@ -36,12 +40,17 @@
   line-height: 34px;
   color: $blue;
 
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
 }
 
 .advantages__icon {
   fill: $blue;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
+
+  &[height="31"] {
+    margin-bottom: 22px;
+    margin-top: 2px;
+  }
 }
 
 .advantages__text {

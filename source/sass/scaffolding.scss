@@ -2,10 +2,7 @@ body {
   @include reset-space;
   background-color: $white;
 
-  font-family: "PT Mono", monospace;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 22px;
+  @include page-main-font;
 
   color: $text-grey;
 
@@ -76,4 +73,24 @@ input[type="radio"].visually-hidden,
 
 .modal-nojs {
   display: none;
+}
+
+.advantages-and-about-company-wrapper {
+  background-color: $white;
+  background-image:
+    url("../../img/bg-advantages-triangle-big.svg"),
+    url("../../img/bg-advantages-triangle.svg"),
+    url("../../img/bg-advantages-triangle-big-reversed.svg"),
+    url("../../img/bg-advantages-triangle-reversed.svg");
+  background-size:
+    auto,
+    auto,
+    auto,
+    auto;
+  background-position:
+    bottom 147px left 559px,
+    top 396px right 11px,
+    bottom -151px left 0,
+    top 45px left 202px;
+  background-repeat: no-repeat;
 }

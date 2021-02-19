@@ -1,19 +1,34 @@
 .form {
   background-color: $blue;
-  padding-top: 96px;
+  padding-top: 91px;
   padding-bottom: 113px;
+
+  background-image:
+    url("../../img/bg-triangle-main-desktop.svg"),
+    url("../../img/bg-form-triangle.svg"),
+    url("../../img/bg-form-triangle-small.svg");
+  background-size:
+    auto,
+    auto,
+    auto;
+  background-position:
+    bottom -33px right 838px,
+    bottom -22px right -17px,
+    top 42px right -4px;
+  background-repeat: no-repeat;
 }
 
 .form__bg-wrap {
   @include desktop-container;
   @include flex-row;
+  padding-left: 228px;
 }
 
 .form__img {
   max-height: 288px;
-  margin-right: 115px;
-  margin-left: -115px;
-  margin-top: calc(161px - 96px);
+  margin-right: 111px;
+  margin-left: -111px;
+  margin-top: 70px;
 }
 
 .form__form {
@@ -28,7 +43,7 @@
   line-height: 51px;
 
   color: $white;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .form__text {
@@ -36,11 +51,13 @@
   color: $white;
 
   margin-bottom: 49px;
+  padding-left: 4px;
 }
 
 .form__upper-wrapper {
   @include flex-row;
   margin-bottom: 40px;
+  padding-left: 4px;
 }
 
 .form__name-wrap {
@@ -69,14 +86,19 @@
     width: auto;
     min-height: 154px;
 
+    padding-top: 11px;
+
     resize: none;
   }
 
-  margin-bottom: 43px;
+  padding-left: 4px;
+  margin-bottom: 36px;
 }
 
 .form__lower-wrapper {
   @include flex-row;
+
+  padding-left: 4px;
 
   button {
     @include active-states-bg-blue;
@@ -101,7 +123,7 @@
 }
 
 .form__checkbox-wrap {
-  margin-left: 38px;
+  margin-left: 30px;
 
   width: 270px;
   padding-left: 40px;
@@ -119,7 +141,7 @@
       content: "";
       position: absolute;
       top: 5px;
-      left: -30px;
+      left: -32px;
 
       width: 16px;
       height: 16px;

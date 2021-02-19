@@ -1,16 +1,21 @@
 .about-company {
   @include desktop-container;
   @include flex-row;
-  margin-bottom: 110px;
+  padding-top: 14px;
+  margin-bottom: 96px;
+  padding-left: 103px;
 }
 
 .about-company__img {
   @include empty-rule;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .about-company__wrapper {
   @include flex-column;
   align-items: start;
+  margin-left: -10px;
 }
 
 .about-company__title {
@@ -20,12 +25,14 @@
   font-size: 36px;
   line-height: 51px;
 
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .about-company__text {
   @include reset-space;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+
+  max-width: 984px;
 }
 
 .about-company__btn {
@@ -42,7 +49,7 @@
   border-radius: 5px;
   border: 1px solid $blue;
   padding: 14px calc(735px - 685px);
-  margin-top: 25px;
+  margin-top: 18px;
 }
 
 .about-company__btn:hover,

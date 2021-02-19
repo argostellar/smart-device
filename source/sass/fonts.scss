@@ -4,8 +4,8 @@
   font-style: normal;
   font-display: swap;
   src: local("PT Mono"),
-    url("../fonts/ptmono-regular.woff2") format("woff2"),
-    url("../fonts/ptmono-regular.woff") format("woff");
+    url("../fonts/ptmono.woff2") format("woff2"),
+    url("../fonts/ptmono.woff") format("woff");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-style: normal;
   font-display: swap;
   src: local("Roboto"),
-    url("../fonts/roboto-medium.woff2") format("woff2"),
-    url("../fonts/roboto-medium.woff") format("woff");
+    url("../fonts/Robotomedium.woff2") format("woff2"),
+    url("../fonts/Robotomedium.woff") format("woff");
 }
 
 @font-face {
@@ -24,8 +24,8 @@
   font-style: normal;
   font-display: swap;
   src: local("Roboto Condensed"),
-    url("../fonts/robotocondensed-regular.woff2") format("woff2"),
-    url("../fonts/robotocondensed-regular.woff") format("woff");
+    url("../fonts/Robotocondensed.woff2") format("woff2"),
+    url("../fonts/Robotocondensed.woff") format("woff");
 }
 
 @font-face {
@@ -34,6 +34,6 @@
   font-style: normal;
   font-display: swap;
   src: local("Roboto Condensed"),
-    url("../fonts/robotocondensed-bold.woff2") format("woff2"),
-    url("../fonts/robotocondensed-bold.woff") format("woff");
+    url("../fonts/Robotocondensedbold.woff2") format("woff2"),
+    url("../fonts/Robotocondensedbold.woff") format("woff");
 }

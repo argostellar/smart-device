@@ -102,9 +102,9 @@
   const countTelRegExp = new RegExp('[\w\s]{17}', 'g');
   // const telRegExp = new RegExp('(\+(7)\s\([0-9]{3}\)\s[0-9]{3}\s[0-9]{4}){1}', 'g');
 
-  const initaialTelValue = '+7 (';
+  const initaialTelValue = '+7(';
 
-  const telValidationRule = 'Введите телефон в формате "+7 (XXX) XXX XXXX"';
+  const telValidationRule = 'Введите телефон в формате "+7(XXX)XXXXXXX"';
 
   const setInputInitialState = (input) => {
     input.value = initaialTelValue;
@@ -129,11 +129,9 @@
   const formatValue = (value) => {
     let currentValue = value.replace(cleanerTelRegExp, '');
     if (value.length === initaialTelValue.length + 3) {
-      currentValue = `${value}) `;
-    } else if (value.length === 12) {
-      currentValue = `${value} `;
-    } else if (value.length >= 17) {
-      currentValue = value.slice(0, 17);
+      currentValue = `${value})`;
+    } else if (value.length >= 14) {
+      currentValue = value.slice(0, 14);
     }
     return currentValue;
   };
@@ -169,7 +167,8 @@
     input.addEventListener('focus', onInputFocusSetValue);
     input.addEventListener('keyup', onInputKeyupFormatValue);
     input.addEventListener('blur', onInputBlurSetValue);
-    input.addEventListener('invalid', onInputValidate);
+    // input.setCustomValidity(telValidationRule);
+    // input.addEventListener('invalid', onInputValidate);
     // input.addEventListener('input', onInputCheckValidity);
   };
 

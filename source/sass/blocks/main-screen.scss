@@ -2,18 +2,19 @@
   @include flex-row;
   background-color: $dark-grey;
   background-image:
-    url("../../img/bg-triangle-main.svg"),
+    url("../../img/bg-triangle-main-desktop.svg"),
     url("../../img/bg-main-screen.png");
-  background-size: cover, cover;
-  background-position: center, center;
+  background-size: auto, cover;
+  background-position: 0% 0%, center;
   margin-top: -90px;
+  // margin-bottom: 96px;
   z-index: 1;
 }
 
 .main-screen__inner-wrapper {
   @include desktop-container;
   @include flex-row;
-  padding-top: 176px;
+  padding-top: 158px;
   margin-top: 100px;
   margin-bottom: 108px;
 }
@@ -42,7 +43,7 @@
 
   min-width: 718px;
 
-  margin-bottom: 31px;
+  margin-bottom: 28px;
 }
 
 .main-screen__text {
@@ -54,7 +55,7 @@
   max-width: 683px;
 
   margin-left: calc(66px + 28px);
-  margin-bottom: 37px;
+  margin-bottom: 44px;
 
   position: relative;
 
@@ -63,7 +64,7 @@
     position: absolute;
 
     top: 17px;
-    left: -94px;
+    left: -93px;
 
     width: 66px;
     height: 2px;
@@ -83,13 +84,22 @@
 
   background-color: $blue;
   border-radius: 5px;
-  padding: 17px 28px;
+  padding: 18px 47px;
+
+  padding-top: 17px;
+  padding-bottom: 19px;
 
   text-decoration: none;
 
   margin-left: 94px;
-  margin-bottom: 93px;
+  margin-bottom: 59px;
   align-self: start;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    background-color: $white;
+  }
 }
 
 .main-screen__btn-text {
@@ -109,18 +119,23 @@
   line-height: 16px;
   color: $white;
   opacity: 0.5;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(-73px);
 
   text-decoration: none;
   align-self: start;
-  margin-left: -40px;
+  margin-left: -38px;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
 }
 
 .main-screen__img {
   max-width: 705px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 9px;
   z-index: 1;
 }
 
