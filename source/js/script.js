@@ -254,7 +254,7 @@
 
   const changeBtnStates = (button) => {
     changeBtnTypeToHide(button);
-    for (const btn of footerBtns) {
+    for (let btn of footerBtns) {
       const condition = (btn !== button && defineChangeBtnsState(button, btn));
 
       if (btn === button) {
@@ -271,8 +271,8 @@
 
   const findListStates = (nodeList) => {
     let nodeStates = {};
-    for (const node of nodeList) {
-      for (const list of footerLists) {
+    for (let node of nodeList) {
+      for (let list of footerLists) {
         (node === list) ? nodeStates.similar = node : nodeStates.nonSimilar = list;
         if (nodeStates.similar !== undefined) {
           return nodeStates;
@@ -284,7 +284,7 @@
 
   const findBtnState = (button) => {
     let btnStates = {};
-    for (const btn of footerBtns) {
+    for (let btn of footerBtns) {
       (button === btn) ? btnStates.similar = button : btnStates.nonSimilar = btn;
     }
     return btnStates;
