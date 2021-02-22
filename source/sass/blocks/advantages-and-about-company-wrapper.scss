@@ -1,0 +1,33 @@
+.advantages-and-about-company-wrapper {
+  background-color: $white;
+  background-image:
+    url("../../img/bg-advantages-triangle-big.svg"),
+    url("../../img/bg-advantages-triangle.svg"),
+    url("../../img/bg-advantages-triangle-big-reversed.svg"),
+    url("../../img/bg-advantages-triangle-reversed.svg");
+  background-size:
+    auto,
+    auto,
+    auto,
+    auto;
+  background-position:
+    bottom 147px left 559px,
+    top 396px right 11px,
+    bottom -151px left 0,
+    top 45px left 202px;
+  background-repeat: no-repeat;
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../../img/bg-advantages-triangle-big.svg");
+    background-size: auto;
+    background-position: bottom 75px left 211px;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../../img/bg-advantages-triangle-big.svg");
+    background-size: auto;
+    background-position: bottom 206px left -120px;
+    background-repeat: no-repeat;
+  }
+}

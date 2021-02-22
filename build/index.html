@@ -64,7 +64,7 @@
       <a class="main-header__logo logo">
         <picture>
           <source media="(max-width: 767px)" srcset="img/logo-circuit-mobile.svg">
-          <img class="logo__image" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
+          <img class="logo__image logo__image--header" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
         </picture>
         <div class="logo__text-wrapper">
           <p class="logo__maintext logo__maintext--header">Smart Device</p>
@@ -117,7 +117,7 @@
       <section class="advantages" id="advantages">
         <h3 class="visually-hidden">Блок с преимуществами</h3>
         <ul class="advantages__list">
-          <li class="advantages__item">
+          <li class="advantages__item" data-adv-item="1">
             <div class="advantages__icon-wrapper">
               <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="29" height="35" data-icon-name="stopwatch">
                 <use xlink:href="#icon-stopwatch"></use>
@@ -126,7 +126,7 @@
             <h4 class="advantages__title">Оперативные сроки </h4>
             <p class="advantages__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item" data-adv-item="2">
             <div class="advantages__icon-wrapper">
               <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" data-icon-name="hired">
                 <use xlink:href="#icon-hired"></use>
@@ -136,7 +136,7 @@
             <p class="advantages__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
             </p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item" data-adv-item="3">
             <div class="advantages__icon-wrapper">
               <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="36" height="31" data-icon-name="detective">
                 <use xlink:href="#icon-detective"></use>
@@ -146,7 +146,7 @@
             <p class="advantages__text">По желанию клиента&emsp;мы обеспечиваем полную конфеденциальность.
             </p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item" data-adv-item="4">
             <div class="advantages__icon-wrapper">
               <svg class="advantages__icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" data-icon-name="tag">
                 <use xlink:href="#icon-tag"></use>
@@ -180,7 +180,8 @@
                   <use xlink:href="#icon-arrow"></use>
                 </svg>
               </div>
-          </a></li>
+            </a>
+          </li>
           <li class="goods__item" data-number="2">
             <a class="goods__link" href="#">
               <h4 class="goods__name">Монтаж печатныx плат</h4>
@@ -190,7 +191,8 @@
                   <use xlink:href="#icon-arrow"></use>
                 </svg>
               </div>
-          </a></li>
+            </a>
+          </li>
           <li class="goods__item" data-number="3">
             <a class="goods__link" href="#">
               <h4 class="goods__name">Комплектующие для светотехники</h4>
@@ -200,7 +202,8 @@
                   <use xlink:href="#icon-arrow"></use>
                 </svg>
               </div>
-          </a></li>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
@@ -212,10 +215,10 @@
           <p class="form__text">Мы проконсультируем Вас бесплатно</p>
           <div class="form__upper-wrapper">
             <div class="form__name-wrap">
-              <input type="text" name="" placeholder="Имя">
+              <input type="text" name="user-name" placeholder="Имя">
             </div>
             <div class="form__tel-wrap">
-              <input type="tel" name="" placeholder="Телефон" pattern="(\+7\([0-9]{3}\)[0-9]{3}[0-9]{4})" required="">
+              <input type="tel" name="user-phone" placeholder="Телефон" pattern="(\+7\([0-9]{3}\)[0-9]{3}[0-9]{4})" required="">
             </div>
           </div>
           <div class="form__textarea-wrap">
@@ -224,7 +227,7 @@
           <div class="form__lower-wrapper">
             <button type="submit">Задать вопрос</button>
             <div class="form__checkbox-wrap">
-              <input type="checkbox" name="form-personal-data" id="personal-data" checked="">
+              <input type="checkbox" name="personal-data" id="form-personal-data" checked="">
               <label tabindex="0" for="form-personal-data">Я согласен на обработку персональных данных</label>
             </div>
           </div>

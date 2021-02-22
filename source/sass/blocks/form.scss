@@ -254,8 +254,8 @@
 
 @media (max-width: $mobile-width-only) {
   .form {
-    padding-top: 33px;
-    padding-bottom: 41px;
+    padding-top: 30px;
+    padding-bottom: 35px;
   }
 
   .form__bg-wrap {
@@ -277,10 +277,11 @@
     line-height: 39px;
 
     margin-left: 0;
+    margin-bottom: 13px;
   }
 
   .form__text {
-    @include empty-rule;
+    margin-bottom: 26px;
   }
 
   .form__upper-wrapper {
@@ -303,7 +304,7 @@
 
   .form__textarea-wrap {
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 
     textarea {
       min-width: 290px;
@@ -313,10 +314,24 @@
 
   .form__lower-wrapper {
     @include flex-column;
+
+    button {
+      padding-top: 15px;
+      padding-bottom: 14px;
+    }
   }
 
   .form__checkbox-wrap {
     margin-left: 0;
-    margin-top: 30px;
+    margin-top: 25px;
+
+    padding-left: 34px;
+
+    label {
+      &::before {
+        top: 2px;
+        left: -33px;
+      }
+    }
   }
 }

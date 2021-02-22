@@ -120,26 +120,26 @@
 
 .main-footer__info-item {
   margin: 14px auto;
+}
 
-  &[data-footer-number="1"] {
-    margin-left: 0;
-    margin-right: 76px;
-  }
+.main-footer__info-item[data-footer-number="1"] {
+  margin-left: 0;
+  margin-right: 76px;
+}
 
-  &[data-footer-number="2"] {
-    margin-left: 0;
-    margin-right: 141px;
-  }
+.main-footer__info-item[data-footer-number="2"] {
+  margin-left: 0;
+  margin-right: 141px;
+}
 
-  &[data-footer-number="3"] {
-    margin-left: 0;
-    margin-right: auto;
-  }
+.main-footer__info-item[data-footer-number="3"] {
+  margin-left: 0;
+  margin-right: auto;
+}
 
-  &[data-footer-number="4"] {
-    margin-left: auto;
-    margin-right: 0;
-  }
+.main-footer__info-item[data-footer-number="4"] {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .main-footer__info-text {
@@ -197,18 +197,15 @@
   .main-footer__sections-wrapper {
     margin-left: 0;
     margin-right: auto;
-
-    .main-footer__title {
-      margin-left: 2px;
-    }
   }
 
   .main-footer__contact-details-wrapper {
     margin-right: -4px;
+  }
 
-    .main-footer__title {
-      margin-left: 2px;
-    }
+  .main-footer__sections-wrapper .main-footer__title,
+  .main-footer__contact-details-wrapper .main-footer__title {
+    margin-left: 2px;
   }
 
   .main-footer__lower-part-wrapper {
@@ -263,24 +260,16 @@
   .main-footer__info-item {
     margin-top: 21px;
     margin-bottom: 24px;
+  }
 
-    &[data-footer-number="1"] {
-      display: none;
-    }
+  .main-footer__info-item[data-footer-number="1"] {
+    display: none;
+  }
 
-    &[data-footer-number="2"] {
-      position: absolute;
-      top: 16px;
-      left: 328px;
-    }
-
-    &[data-footer-number="3"] {
-      @include empty-rule;
-    }
-
-    &[data-footer-number="4"] {
-      @include empty-rule;
-    }
+  .main-footer__info-item[data-footer-number="2"] {
+    position: absolute;
+    top: 16px;
+    left: 328px;
   }
 
   .main-footer__info-text {
@@ -310,12 +299,15 @@
     @include flex-column;
     justify-content: space-between;
     margin-top: 46px;
-    padding-bottom: 50px;
+    padding: 0;
+    padding-bottom: 47px;
   }
 
   .main-footer__info-wrapper {
     @include flex-column;
     padding: 0;
+    margin-top: 29px;
+    margin-bottom: 26px;
   }
 
   .main-footer__sections-wrapper {
@@ -336,12 +328,17 @@
     margin-top: 28px;
   }
 
+  .main-footer__sections-wrapper .main-footer__title,
+  .main-footer__contact-details-wrapper .main-footer__title {
+    margin-left: 0;
+  }
+
   .main-footer__lower-part-wrapper {
     @include empty-rule;
   }
 
   .main-footer__logo-wrapper {
-    margin-bottom: 83px;
+    margin-bottom: 80px;
   }
 
   .main-footer__logo {
@@ -353,7 +350,7 @@
   }
 
   .main-footer__title {
-    @include empty-rule;
+    margin-bottom: 27px;
   }
 
   .main-footer__btn {
@@ -406,25 +403,26 @@
     &::after {
       background-color: $social-grey;
     }
+  }
 
-    .main-footer__btn--nojs {
-      &::before {
-        background-color: transparent;
-      }
+  .main-footer__btn--nojs {
+    &::before {
+      background-color: transparent;
+    }
 
-      &::after {
-        background-color: transparent;
-      }
+    &::after {
+      background-color: transparent;
     }
   }
 
   .main-footer__list {
     &--sections {
+      margin-top: 5px;
       margin-bottom: 23px;
     }
 
     &--contact-details {
-      @include empty-rule;
+      margin-top: 5px;
     }
 
     &--hidden {
@@ -454,23 +452,24 @@
 
   .main-footer__info-item {
     @include empty-rule;
+  }
 
-    &[data-footer-number="1"] {
-      display: none;
-    }
+  .main-footer__info-item[data-footer-number="1"] {
+    display: none;
+  }
 
-    &[data-footer-number="2"] {
-      position: absolute;
-      top: 96px;
-      left: 45px;
+  .main-footer__info-item[data-footer-number="2"] {
+    position: absolute;
+    top: 103px;
+    left: 45px;
 
-      min-width: 233px;
-    }
+    min-width: 233px;
+  }
 
-    &[data-footer-number="3"],
-    &[data-footer-number="4"] {
-      margin: 0;
-      margin-bottom: 21px;
-    }
+  .main-footer__info-item[data-footer-number="3"],
+  .main-footer__info-item[data-footer-number="4"] {
+    margin: 0;
+    margin-bottom: 21px;
+    margin-left: -14px;
   }
 }
