@@ -22,6 +22,10 @@
   @include empty-rule;
 }
 
+.main-footer__logo p {
+  color: $logo-black;
+}
+
 .main-footer__social {
   margin-bottom: 59px;
 }
@@ -34,22 +38,22 @@
 .main-footer__sections-wrapper {
   margin-right: 356px;
   margin-left: 0;
+}
 
-  .main-footer__title {
-    margin-left: 9px;
-  }
+.main-footer__sections-wrapper h3 {
+  margin-left: 9px;
 }
 
 .main-footer__contact-details-wrapper {
   margin-left: auto;
   margin-right: 0;
-
-  .main-footer__title {
-    margin-left: 2px;
-  }
 }
 
-.main-footer__title {
+.main-footer__contact-details-wrapper h3 {
+  margin-left: 2px;
+}
+
+.main-footer__info-wrapper h3 {
   @include reset-space;
   @include roboto-condensed-font;
   color: $dark-grey;
@@ -142,7 +146,8 @@
   margin-right: 0;
 }
 
-.main-footer__info-text {
+.main-footer__info-item p,
+.main-footer__info-item a {
   @include reset-space;
   font-size: 13px;
   line-height: 24px;
@@ -151,7 +156,7 @@
   color: $dark-grey-transparent;
 }
 
-.main-footer__info-text--link {
+.main-footer__info-item a {
   @include reset-space;
 
   &:hover,
@@ -203,8 +208,8 @@
     margin-right: -4px;
   }
 
-  .main-footer__sections-wrapper .main-footer__title,
-  .main-footer__contact-details-wrapper .main-footer__title {
+  .main-footer__sections-wrapper h3,
+  .main-footer__contact-details-wrapper h3 {
     margin-left: 2px;
   }
 
@@ -222,10 +227,6 @@
 
   .main-footer__social {
     margin: 0;
-  }
-
-  .main-footer__title {
-    @include empty-rule;
   }
 
   .main-footer__list {
@@ -272,13 +273,7 @@
     left: 328px;
   }
 
-  .main-footer__info-text {
-    @include empty-rule;
-  }
-
-  .main-footer__info-text--link {
-    @include empty-rule;
-
+  .main-footer__info-item a {
     &:hover,
     &:focus {
       color: $logo-black;
@@ -328,8 +323,8 @@
     margin-top: 28px;
   }
 
-  .main-footer__sections-wrapper .main-footer__title,
-  .main-footer__contact-details-wrapper .main-footer__title {
+  .main-footer__sections-wrapper h3,
+  .main-footer__contact-details-wrapper h3 {
     margin-left: 0;
   }
 
@@ -349,7 +344,7 @@
     margin: 0;
   }
 
-  .main-footer__title {
+  .main-footer__info-wrapper h3 {
     margin-bottom: 27px;
   }
 

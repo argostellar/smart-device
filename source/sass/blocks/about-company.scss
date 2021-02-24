@@ -2,12 +2,11 @@
   @include desktop-container;
   @include flex-row;
   padding-top: 14px;
-  margin-bottom: 96px;
+  margin-bottom: 90px;
   padding-left: 103px;
 }
 
-.about-company__img {
-  @include empty-rule;
+.about-company img {
   margin-left: 10px;
   margin-top: 5px;
 }
@@ -18,7 +17,7 @@
   margin-left: -10px;
 }
 
-.about-company__title {
+.about-company__wrapper h3 {
   @include reset-space;
   @include roboto-condensed-font;
   font-weight: 400;
@@ -28,19 +27,19 @@
   margin-bottom: 22px;
 }
 
-.about-company__text {
+.about-company__wrapper p {
   @include reset-space;
   margin-bottom: 20px;
 
   max-width: 984px;
 }
 
-.about-company__full-text {
-  display: inline;
+.about-company__wrapper span:nth-child(2n) {
+  display: none;
 }
 
-.about-company__hidden-text {
-  display: none;
+.about-company__wrapper span:nth-child(2n-1) {
+  display: inline;
 }
 
 .about-company__btn {
@@ -71,13 +70,14 @@
     @include tablet-container;
     margin-left: 0;
     margin-right: 10px;
-    margin-bottom: 75px;
+    margin-bottom: 69px;
   }
 
-  .about-company__img {
+  .about-company img {
     margin-top: -2px;
-    margin-left: -8px;
+    margin-left: -9px;
 
+    min-width: 252px;
     width: auto;
     height: 362px;
   }
@@ -86,23 +86,23 @@
     margin-left: -33px;
   }
 
-  .about-company__title {
+  .about-company__wrapper h3 {
     font-size: 32px;
     line-height: 45px;
     margin-bottom: 24px;
   }
 
-  .about-company__text {
+  .about-company__wrapper p {
     margin-bottom: 21px;
     margin-left: 2px;
   }
 
-  .about-company__full-text {
-    display: none;
+  .about-company__wrapper span:nth-child(2n) {
+    display: inline;
   }
 
-  .about-company__hidden-text {
-    display: inline;
+  .about-company__wrapper span:nth-child(2n-1) {
+    display: none;
   }
 
   .about-company__btn {
@@ -123,7 +123,7 @@
     margin-left: 14px;
   }
 
-  .about-company__img {
+  .about-company img {
     display: none;
   }
 
@@ -131,13 +131,13 @@
     margin-left: 0;
   }
 
-  .about-company__title {
+  .about-company__wrapper h3 {
     font-size: 28px;
     line-height: 39px;
     margin-bottom: 21px;
   }
 
-  .about-company__text {
+  .about-company__wrapper p {
     margin-bottom: 40px;
   }
 

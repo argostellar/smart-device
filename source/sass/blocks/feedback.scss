@@ -17,9 +17,9 @@
   // padding: 33px 36px 39px;
   padding-top: 33px;
   padding-bottom: 29px;
-  $omaha: 39px;
-  padding-left: $omaha;
-  padding-right: $omaha;
+  $padding-width: 39px;
+  padding-left: $padding-width;
+  padding-right: $padding-width;
 }
 
 .feedback__close-btn {
@@ -40,7 +40,7 @@
   margin-left: 3px;
 }
 
-.feedback__title {
+.feedback__form h3 {
   @include reset-space;
   @include roboto-condensed-font;
   font-weight: 400;
@@ -52,7 +52,7 @@
   margin-bottom: 10px;
 }
 
-.feedback__text {
+.feedback__form p {
   @include reset-space;
 
   color: $white;
@@ -118,11 +118,11 @@
 
   input {
     display: none;
+  }
 
-    &:checked + label {
-      &::before {
-        background-image: url("../../img/icon-checkbox-check.svg");
-      }
+  input:checked + label {
+    &::before {
+      background-image: url("../../img/icon-checkbox-check.svg");
     }
   }
 

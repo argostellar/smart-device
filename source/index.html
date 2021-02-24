@@ -17,11 +17,11 @@
       <a class="main-header__logo logo">
         <picture>
           <source media="(max-width: 767px)" srcset="img/logo-circuit-mobile.svg">
-          <img class="logo__image logo__image--header" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
+          <img src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
         </picture>
         <div class="logo__text-wrapper">
-          <p class="logo__maintext logo__maintext--header">Smart Device</p>
-          <p class="logo__subtext logo__subtext--header">умные технологии</p>
+          <p>Smart Device</p>
+          <span>умные технологии</span>
         </div>
       </a>
     </div>
@@ -31,7 +31,7 @@
           <svg class="main-header__contacts-icon main-header__contacts-icon--email" xmlns="http://www.w3.org/2000/svg" width="19" height="14">
             <use xlink:href="#icon-envelope"></use>
           </svg>
-          <span class="main-header__contacts-text">info@sd.ru</span>
+          <span>info@sd.ru</span>
         </a>
       </li>
       <li class="main-header__contacts-item" data-header-list-item="tel">
@@ -39,7 +39,7 @@
           <svg class="main-header__contacts-icon main-header__contacts-icon--tel" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
             <use xlink:href="#icon-phone-call"></use>
           </svg>
-          <span class="main-header__contacts-text">+7 (495) 000 52 52</span>
+          <span>+7 (495) 000 52 52</span>
         </a>
       </li>
     </ul>
@@ -49,19 +49,22 @@
     <section class="main-screen">
       <div class="main-screen__inner-wrapper">
         <div class="main-screen__text-wrapper">
-          <h2 class="main-screen__title">Печатные платы</h2>
-          <p class="main-screen__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <h2>Печатные платы</h2>
+          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
           <a class="main-screen__main-btn" href="#page-form">
-            <span class="main-screen__btn-text main-screen__btn-text--non-mobile">Получить бесплатную консультацию</span>
-            <span class="main-screen__btn-text main-screen__btn-text--mobile">Бесплатная консультация</span>
+            <span>Получить бесплатную консультацию</span>
+            <span>Бесплатная консультация</span>
           </a>
           <a class="main-screen__scroll-btn" href="#advantages">Скролл вниз</a>
         </div>
         <div class="main-screen__img-wrapper">
           <picture>
-            <source media="(max-width: 769px) and (min-width:320px)" srcset="img/circuits-mobile.png">
-            <source media="(max-width: 1023px) and (min-width:770px)" srcset="img/circuits-tablet.png">
-            <img class="main-screen__img" src="img/circuits-desktop.png" width="705" height="515" alt="Изображение печатных плат" loading="lazy">
+            <!-- 1х: 294px; 2x: 588px; 3x: 882px -->
+            <source type="image/webp" media="(max-width: 769px) and (min-width:320px)" srcset="img/index-circuits-mobile@1x.webp 1x, img/index-circuits-mobile@2x.webp 2x, img/index-circuits-mobile@3x.webp 3x">
+            <!-- 1х: 705px; 2x: 1410px; 3x: 2115px -->
+            <source type="image/webp" srcset="img/index-circuits-desktop@1x.webp 1x, img/index-circuits-desktop@2x.webp 2x, img/index-circuits-desktop@3x.webp 3x">
+            <!-- 1х: 705px; 2x: 1410px; 3x: 2115px -->
+            <img src="img/index-circuits-desktop@1x.png" srcset="img/index-circuits-desktop@2x.png 2x, img/index-circuits-desktop@3x.png 3x" width="705" height="515" alt="Изображение печатных плат" loading="lazy">
           </picture>
         </div>
       </div>
@@ -76,8 +79,8 @@
                 <use xlink:href="#icon-stopwatch"></use>
               </svg>
             </div>
-            <h4 class="advantages__title">Оперативные сроки </h4>
-            <p class="advantages__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+            <h4>Оперативные сроки </h4>
+            <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
           </li>
           <li class="advantages__item" data-adv-item="2">
             <div class="advantages__icon-wrapper">
@@ -85,8 +88,8 @@
                 <use xlink:href="#icon-hired"></use>
               </svg>
             </div>
-            <h4 class="advantages__title">Крупные поставщики</h4>
-            <p class="advantages__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+            <h4>Крупные поставщики</h4>
+            <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
             </p>
           </li>
           <li class="advantages__item" data-adv-item="3">
@@ -95,8 +98,8 @@
                 <use xlink:href="#icon-detective"></use>
               </svg>
             </div>
-            <h4 class="advantages__title">Полная конфиденциальность</h4>
-            <p class="advantages__text">По желанию клиента&emsp;мы обеспечиваем полную конфеденциальность.
+            <h4>Полная конфиденциальность</h4>
+            <p>По желанию клиента&emsp;мы обеспечиваем полную конфеденциальность.
             </p>
           </li>
           <li class="advantages__item" data-adv-item="4">
@@ -105,28 +108,33 @@
                 <use xlink:href="#icon-tag"></use>
               </svg>
             </div>
-            <h4 class="advantages__title">Персонализация стоимости</h4>
-            <p class="advantages__text">Мы&emsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает. </p>
+            <h4>Персонализация стоимости</h4>
+            <p>Мы&emsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает. </p>
           </li>
         </ul>
       </section>
       <section class="about-company">
-        <img class="about-company__img" src="img/about-year-2005.png" width="220" height="317" alt="Изображение года основания">
+        <picture>
+          <!-- 1х: 220px; 2x: 440px; 3x: 660px -->
+          <source type="image/webp" srcset="img/-desktop@1x.webp 1x, img/index-about-year-2005-desktop@2x.webp 2x, img/index-about-year-2005-desktop@3x.webp 3x">
+          <!-- 1х: 220px; 2x: 440px; 3x: 660px -->
+          <img src="img/index-about-year-2005-desktop@1x.png" srcset="img/index-about-year-2005-desktop@2x.png 2x, img/index-about-year-2005-desktop@3x.png 3x" width="220" height="317" alt="Изображение года основания">
+        </picture>
         <div class="about-company__wrapper">
-          <h3 class="about-company__title">О компании</h3>
-          <p class="about-company__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-          <p class="about-company__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span class="about-company__full-text"> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span><span class="about-company__hidden-text">..</span></p>
+          <h3>О компании</h3>
+          <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+          <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span> (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span><span>..</span></p>
           <a class="about-company__btn" href="#">Подробнее</a>
         </div>
       </section>
     </div>
     <section class="goods">
       <div class="goods__wrapper">
-        <h3 class="goods__title">Service Device предлагает следующие товары и услуги</h3>
+        <h3>Service Device предлагает следующие товары и услуги</h3>
         <ul class="goods__list">
           <li class="goods__item" data-number="1">
             <a class="goods__link" href="#">
-              <h4 class="goods__name">Производство печатных плат</h4>
+              <h4>Производство печатных плат</h4>
               <div class="goods__btn">
                 <span class="visually-hidden">Перейти к категории</span>
                 <svg class="goods__arrow" xmlns="http://www.w3.org/2000/svg" width="4" height="8">
@@ -137,7 +145,7 @@
           </li>
           <li class="goods__item" data-number="2">
             <a class="goods__link" href="#">
-              <h4 class="goods__name">Монтаж печатныx плат</h4>
+              <h4>Монтаж печатныx плат</h4>
               <div class="goods__btn">
                 <span class="visually-hidden">Перейти к категории</span>
                 <svg class="goods__arrow" xmlns="http://www.w3.org/2000/svg" width="4" height="8">
@@ -148,7 +156,7 @@
           </li>
           <li class="goods__item" data-number="3">
             <a class="goods__link" href="#">
-              <h4 class="goods__name">Комплектующие для светотехники</h4>
+              <h4>Комплектующие для светотехники</h4>
               <div class="goods__btn">
                 <span class="visually-hidden">Перейти к категории</span>
                 <svg class="goods__arrow" xmlns="http://www.w3.org/2000/svg" width="4" height="8">
@@ -162,20 +170,28 @@
     </section>
     <section class="form" id="page-form">
       <div class="form__bg-wrap">
-        <img class="form__img" src="img/form-paper-airplane.png" width="511" height="288" alt="Изображение бумажного самолётика">
+        <picture>
+          <!-- 1х: 511px; 2x: 1022px; 3x: 1533px -->
+          <source type="image/webp" srcset="img/index-paper-airplane-desktop@1x.webp 1x, img/index-paper-airplane-desktop@2x.webp 2x, img/index-paper-airplane-desktop@3x.webp 3x">
+          <!-- 1х: 511px; 2x: 1022px; 3x: 1533px -->
+          <img src="img/index-paper-airplane-desktop@1x.png" srcset="img/index-paper-airplane-desktop@2x.png 2x, img/index-paper-airplane-desktop@3x.png 3x" width="511" height="288" alt="Изображение бумажного самолётика" loading="lazy">
+        </picture>
         <form class="form__form">
-          <h3 class="form__title">Остались вопросы? Задайте их нам!</h3>
-          <p class="form__text">Мы проконсультируем Вас бесплатно</p>
+          <h3>Остались вопросы? Задайте их нам!</h3>
+          <p>Мы проконсультируем Вас бесплатно</p>
           <div class="form__upper-wrapper">
             <div class="form__name-wrap">
-              <input type="text" name="user-name" placeholder="Имя">
+              <input type="text" name="user-name" placeholder="Имя" id="form-user-name">
+              <label for="form-user-name" class="visually-hidden">Имя: </label>
             </div>
             <div class="form__tel-wrap">
-              <input type="tel" name="user-phone" placeholder="Телефон" pattern="(\+7\([0-9]{3}\)[0-9]{3}[0-9]{4})" required>
+              <input type="tel" name="user-phone" placeholder="Телефон" pattern="(\+7\([0-9]{3}\)[0-9]{3}[0-9]{4})" id="form-telephone" required>
+              <label for="form-telephone" class="visually-hidden">Телефон: </label>
             </div>
           </div>
           <div class="form__textarea-wrap">
-            <textarea placeholder="Ваш вопрос"></textarea>
+            <textarea placeholder="Ваш вопрос" id="form-question"></textarea>
+            <label for="form-question" class="visually-hidden">Ваш вопрос: </label>
           </div>
           <div class="form__lower-wrapper">
             <button type="submit">Задать вопрос</button>
@@ -190,14 +206,13 @@
   </main>
   <footer class="main-footer">
     <div class="main-footer__upper-part-wrapper">
-      <h3 class="visually-hidden">Upper footer</h3>
       <div class="main-footer__logo-social-wrapper">
         <div class="main-footer__logo-wrapper">
           <a class="main-footer__logo logo">
-            <img class="logo__image" src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
+            <img src="img/logo-circuit.svg" width="52" height="52" alt="Логотип Smart Device">
             <div class="logo__text-wrapper">
-              <p class="logo__maintext logo__maintext--footer">Service Device</p>
-              <p class="logo__subtext">умные технологии</p>
+              <p>Service Device</p>
+              <span>умные технологии</span>
             </div>
           </a>
         </div>
@@ -229,7 +244,7 @@
       </div>
       <div class="main-footer__info-wrapper">
         <div class="main-footer__sections-wrapper">
-          <h3 class="main-footer__title">Разделы сайта</h3>
+          <h3>Разделы сайта</h3>
           <button class="main-footer__btn main-footer__btn--hide main-footer__btn--nojs">
             <span class="visually-hidden">Скрыть</span>
           </button>
@@ -258,7 +273,7 @@
           </ul>
         </div>
         <div class="main-footer__contact-details-wrapper">
-          <h3 class="main-footer__title">Наш офис</h3>
+          <h3>Наш офис</h3>
           <button class="main-footer__btn main-footer__btn--hide main-footer__btn--nojs">
             <span class="visually-hidden">Скрыть</span>
           </button>
@@ -282,16 +297,16 @@
     <div class="main-footer__lower-part-wrapper">
       <ul class="main-footer__info-list">
         <li class="main-footer__info-item" data-footer-number="1">
-          <p class="main-footer__info-text">Все права защищены</p>
+          <p>Все права защищены</p>
         </li>
         <li class="main-footer__info-item" data-footer-number="2">
-          <p class="main-footer__info-text">1999-2018 SD Service Devices</p>
+          <p>1999-2018 SD Service Devices</p>
         </li>
         <li class="main-footer__info-item" data-footer-number="3">
-          <a class="main-footer__info-text main-footer__info-text--link" href="#policy">Условия конфиденциальности</a>
+          <a href="#policy">Условия конфиденциальности</a>
         </li>
         <li class="main-footer__info-item" data-footer-number="4">
-          <p class="main-footer__info-text">Developed by wow studio </p>
+          <p>Developed by wow studio </p>
         </li>
       </ul>
     </div>
@@ -305,16 +320,19 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
       <form class="feedback__form">
-        <h3 class="feedback__title">Закажите звонок</h3>
-        <p class="feedback__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+        <h3>Закажите звонок</h3>
+        <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <div class="feedback__name-wrap">
-          <input type="text" name="username" placeholder="Имя" autofocus>
+          <input type="text" name="username" placeholder="Имя" id="feedback-user-name" autofocus>
+          <label for="feedback-user-name" class="visually-hidden">Имя: </label>
         </div>
         <div class="feedback__tel-wrap">
           <input type="tel" name="telephone" placeholder="Телефон" pattern="(\+7\s\(\d{3}\)\s\d{3}\s\d{4}){1}" required>
+          <label for="feedback-telephone" class="visually-hidden">Телефон: </label>
         </div>
         <div class="feedback__textarea-wrap">
-          <textarea name="question" placeholder="Ваш вопрос"></textarea>
+          <textarea name="question" placeholder="Ваш вопрос" id="feedback-question"></textarea>
+          <label for="feedback-question" class="visually-hidden">Ваш вопрос: </label>
         </div>
         <button class="feedback__btn" type="submit">Отправить</button>
         <div class="feedback__checkbox-wrap">
@@ -325,7 +343,8 @@
     </div>
   </section>
   <div class="overlay hidden modal-nojs"></div>
-  <script src="js/script.js" async></script>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

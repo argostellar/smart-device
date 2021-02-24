@@ -12,6 +12,10 @@
   @include empty-rule;
 }
 
+.main-header__logo p {
+  color: $white;
+}
+
 .main-header__contacts-list {
   @include clear-list;
   @include flex-row;
@@ -21,10 +25,10 @@
 
 .main-header__contacts-item {
   margin: 0;
+}
 
-  &[data-header-list-item="email"] {
-    margin-right: 86px;
-  }
+.main-header__contacts-item[data-header-list-item="email"] {
+  margin-right: 86px;
 }
 
 .main-header__contacts-link {
@@ -94,11 +98,11 @@
 
   .main-header__contacts-item {
     margin: 0;
+  }
 
-    &[data-header-list-item="email"] {
-      margin-right: 34px;
-      margin-bottom: 4px;
-    }
+  .main-header__contacts-item[data-header-list-item="email"] {
+    margin-right: 34px;
+    margin-bottom: 4px;
   }
 
   .main-header__contacts-link {
@@ -122,7 +126,7 @@
     }
   }
 
-  .main-header__contacts-text {
+  .main-header__contacts-item span {
     display: none;
   }
 
@@ -142,17 +146,27 @@
     padding-left: 2px;
   }
 
+  .main-header__logo img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .main-header__logo p,
+  .main-header__logo span {
+    display: none;
+  }
+
   .main-header__contacts-list {
     @include empty-rule;
   }
 
   .main-header__contacts-item {
     margin: 0;
+  }
 
-    &[data-header-list-item="email"] {
-      margin-right: 1px;
-      margin-bottom: 7px;
-    }
+  .main-header__contacts-item[data-header-list-item="email"] {
+    margin-right: 1px;
+    margin-bottom: 7px;
   }
 
   .main-header__contacts-link {
@@ -171,7 +185,7 @@
     }
   }
 
-  .main-header__contacts-text {
+  .main-header__contacts-item span {
     display: none;
   }
 

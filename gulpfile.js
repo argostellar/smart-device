@@ -6,6 +6,11 @@ var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var streamqueue = require('streamqueue');
+var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
+var concat = require('gulp-concat');
+var rigger = require('gulp-rigger');
 var server = require("browser-sync").create();
 var csso = require("gulp-csso");
 var rename = require("gulp-rename");
@@ -30,11 +35,26 @@ gulp.task("css", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src("source/js/script.js")
+  return streamqueue(
+    { objectMode: true },
+    gulp.src("source/js/vendor.js").pipe(rigger()),
+    gulp.src("source/js/*.js").pipe(rigger()).pipe(jshint()).pipe(jshint.reporter(stylish))
+  )
+    .pipe(concat("main.js"))
     .pipe(sourcemap.init())
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });
+
+// gulp.task("js", function () {
+//   return gulp.src("source/js/*.js")
+//     .pipe(concat("main.js"))
+//     .pipe(sourcemap.init())
+//     .pipe(gulp.dest("build/js"))
+//     .pipe(gulp.src("source/js/vendor.js"))
+//     .pipe(gulp.dest("build/js"))
+//     .pipe(server.stream());
+// });
 
 gulp.task("server", function () {
   server.init({
@@ -105,5 +125,13 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "js", "sprite", "html"));
+gulp.task("build", gulp.series(
+  "clean",
+  "copy",
+  "css",
+  "js",
+  "sprite",
+  "html"
+));
+
 gulp.task("start", gulp.series("build", "server"));

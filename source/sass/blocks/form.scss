@@ -24,7 +24,7 @@
   padding-left: 228px;
 }
 
-.form__img {
+.form__bg-wrap img {
   max-height: 288px;
   margin-right: 111px;
   margin-left: -111px;
@@ -35,7 +35,7 @@
   @include flex-column;
 }
 
-.form__title {
+.form__form h3 {
   @include reset-space;
   @include roboto-condensed-font;
   font-weight: 400;
@@ -46,7 +46,7 @@
   margin-bottom: 10px;
 }
 
-.form__text {
+.form__form p {
   @include reset-space;
   color: $white;
 
@@ -161,11 +161,11 @@
 
   input {
     display: none;
+  }
 
-    &:checked + label {
-      &::before {
-        background-image: url("../../img/icon-checkbox-check.svg");
-      }
+  input:checked + label {
+    &::before {
+      background-image: url("../../img/icon-checkbox-check.svg");
     }
   }
 }
@@ -184,7 +184,7 @@
     padding: 0 67px;
   }
 
-  .form__img {
+  .form__bg-wrap img {
     display: none;
   }
 
@@ -192,7 +192,7 @@
     padding-left: 0;
   }
 
-  .form__title {
+  .form__form h3 {
     font-size: 32px;
     line-height: 45px;
 
@@ -200,7 +200,7 @@
     margin-bottom: 16px;
   }
 
-  .form__text {
+  .form__form p {
     padding-left: 0;
     margin-bottom: 54px;
   }
@@ -272,7 +272,7 @@
     padding: 0;
   }
 
-  .form__title {
+  .form__form h3 {
     font-size: 28px;
     line-height: 39px;
 
@@ -280,7 +280,7 @@
     margin-bottom: 13px;
   }
 
-  .form__text {
+  .form__form p {
     margin-bottom: 26px;
   }
 
